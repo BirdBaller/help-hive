@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Help Hive</title>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "saved.css">
+        <script src = "script.js" defer></script>
+    </head>
+
+    <body>
+
+        <header class = "topbar">
+            <img src = "logo.png">
+            <h1>Help Hive</h1>
+            
+            <div class="links">
+                <a href="index.html">home</a>
+                <a href="resources.html">resources</a>
+                <a href="form.html">form</a>
+                <a href="saved.html">saved</a>
+            </div>
+            <a href="profile.html" class="profile">
+                <img src="navIcons/gProfile.png">
+                <p>profile</p>
+            </a>
+        </header>
+        
+        <div class="topSlogan">
+            <div class = "resourceSlogan">
+                <p>Your
+                <HL>saved</HL>
+                list</p>
+            </div>
+            <hr>
+        </div>
+        
+        
+        <div id="savedGrid" class="container">
+            
+        </div>
+        
+        <script>
+            const savedGrid = document.getElementById('savedGrid');
+            const savedData = JSON.parse(localStorage.getItem('mySavedResources')) || [];
+
+            if (savedData.length === 0) {
+                savedGrid.innerHTML = "<p class='unsaved'>You haven't saved anything yet!</p>";
+            } else {
+                savedData.forEach(item => {
+                    savedGrid.innerHTML += `
+                        <div class="card">
+                            <h1>${item.title}</h1>
+                            <p>${item.desc}</p>
+                        </div>`;
+                });
+            }
+        </script> 
+        
+        
+        
+        
+        <nav class = navbar>
+            <a href = "index.html"><img src = "navIcons/gHome.png"></a>
+            <a href = "resources.html"><img src = "navIcons/gCompass.png"></a>
+            <a href = "form.html"><img src = "navIcons/gPlus.png"></a>
+            <a href = "saved.html"><img src = "navIcons/ySaved.png"></a>
+            <a href = "profile.html"><img src = "navIcons/gProfile.png"></a>
+        </nav>
+        <footer class = "foot">
+            <hr id="double">
+            <hr id="double">
+            <h1>Help Hive</h1>
+            <div class="another-div😭">
+                <div class="followHold">
+                    <p class="follow">Follow us</p>
+                    <div class = "socials-container">
+                        <a href="https://www.youtube.com/channel/UCh1q2_M9veUj20tRu81d79Q"><img class="icons" src = "socialIcons/youtube.png"></a>
+                        <a href="instagram.com"><img class="icons" src = "socialIcons/instagram.png"></a>
+                        <a href="facebook.com"><img class="icons" src = "socialIcons/facebook.png"></a>
+                        <a href="https://x.com/HELPHIVEFAIRFAX"><img class="icons" src = "socialIcons/twitter.png"></a>
+                    </div>
+                    <hr>
+                </div>
+                <div class="contactHold">
+                    <p class="contact">Contact us</p>
+                    <div class = "contactRow">
+                        <img src = "contactIcons/email.png">
+                        <p>helphive.fairfax@gmail.com</p>
+                    </div>
+                    <div class = "contactRow">
+                        <img src = "contactIcons/call.png">
+                        <p>(510)-333-9678</p>
+                    </div>
+                    <div class = "contactRow">
+                        <a href = index.html><img src = "logo.png"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
