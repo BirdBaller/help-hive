@@ -1,0 +1,52 @@
+@import "style.css";
+
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.unsaved{
+    background: var(--cardbg);
+    font-family:ADLaM-Display;
+    color: var(--txt);
+    padding: 2px 8px 2px 8px;
+    margin-bottom: 40dvh;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.card{
+    display: block;
+    background: var(--cardbg);
+    width: clamp(240px, 65dvw, 280px);
+    padding: 3px 0 3px 0;
+    margin-bottom: 15px;
+    border-radius: clamp(15px, 4dvw, 20px);
+
+    font-family:ADLaM-Display;
+}
+.card h1{
+    display: flex;
+    width: 80%;
+    border-bottom: 1px solid var(--txt);
+    justify-self: center;
+    justify-content: center;
+
+    color: var(--accent);
+    font-size: 1.5rem;
+    text-align: center;
+}
+.card p{
+    width: 90%;
+    margin-left: 5%;
+    
+    color: var(--txt);
+    font-size: clamp(.8rem, 4dvw, .9rem);
+}
+
+
+
+
