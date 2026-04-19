@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Help Hive</title>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "resources.css">
+<!--        <script src = "script.js" defer></script> -->
+    </head>
+
+    <body>
+        <header class = "topbar">
+            <img src = "logo.png">
+            <h1>Help Hive</h1>
+            
+            <div class="links">
+                <a href="index.html">home</a>
+                <a href="resources.html">resources</a>
+                <a href="form.html">form</a>
+                <a href="saved.html">saved</a>
+            </div>
+            <a href="profile.html" class="profile">
+                <img src="navIcons/gProfile.png">
+                <p>profile</p>
+            </a>
+        </header>
+        <div class="topSlogan">
+            <p class = "ResourceSlogan">Meet&nbsp<HL>your</HL>&nbspneeds</p>
+            <hr>
+        </div>
+        
+        
+        
+        <div class="ibecontainin">
+            <div class = "functions">
+                <label for="filter"><img src="resourcePageIcons/gFilter.png">Filter</label>
+                <label for="search"><img src = "resourcePageIcons/gSearch.png">Search</label>
+            </div>
+        
+
+            <input type="checkbox" id="search"> <!-- has to be above searchbar -->
+            <input type="text" id="searchBar" placeholder="Start typing to filter..." onkeyup="filterResources()">
+        
+            <input type="checkbox" id="filter"> <!-- has to be above filters (i dont wanna change the code :d)-->
+            <div class = "filters"> 
+                <button type="button">Return to page(do we need this?)</button>
+    
+                <button type="button" id="vtrBtn">Volunteer</button>
+                <button type="button" id="vtrEvt">Volunteer/Event</button>
+                <button type="button" id="evtBtn">Event</button>
+            
+                <div class = "rats">
+                    <p>Rating Filters</p>
+                    <button type="button">Only N/A</button>
+                    <button type="button">4+</button>
+                </div>
+            </div>
+        </div>
+        
+        <a href="saved.html" class="nav-link">View My Saved List</a>
+    
+    
+    <div id="cardGrid" class="container">
+        
+    </div>
+
+    <script src="script.js"></script>
+    
+    
+    <div class="line">
+        <p id="a">a</p>
+        <p>a</p>
+    </div>
+    
+    
+        
+        
+        
+        <div class = "results">
+            <!--The code under and including line 51 to 106 is a demonstrative example of the html and how it should be filled in-->
+            <div class = "card"
+                data-name = "hope for the warriors"
+                data-type = "volunteer"
+                data-rating = "5.0"
+                data-keywords = "veterans veteran warriors athletic recuring"
+            >
+                <div class = "card-constants">
+                    <img src = "https://news.va.gov/wp-content/uploads/sites/3/2022/08/HopeForTheWarriors-scaled.jpg">
+                    <div class="grid-dy">
+                        <h1>Hope for the Warriors</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>5.0</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Hope For The Warriors is a nonprofit that turns your hope into tangible actions that directly support U.S. military, veterans and their families.</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>8003 Forbes Pla, Springfield, VA 22151</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <p>https://www.hopeforthewarriors.org/</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@hopeforthewarriors.org</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(877) 2HOPE4W</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Mon-Fri 8a-6p</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button id="favorite"><label><input type="checkbox" id="fpic">Save to list</label></button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card"
+                data-name = "little free pantry"
+                data-type = "volunteer"
+                data-rating = "n/a"
+                data-keywords = "little pantry free food food-bank help"
+            >
+                <div class = "card-constants">
+                    <img src = "https://news.va.gov/wp-content/uploads/sites/3/2022/08/HopeForTheWarriors-scaled.jpg">
+                    <div class="grid-dy">
+                        <h1>Little Free Pantry</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>N/A</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Hope For The Warriors is a nonprofit that turns your hope into tangible actions that directly support U.S. military, veterans and their families.</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>8003 Forbes Pla, Springfield, VA 22151</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <p>https://www.hopeforthewarriors.org/</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@hopeforthewarriors.org</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(877) 2HOPE4W</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Mon-Fri 8a-6p</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button id="favorite"><label><input type="checkbox" id="fpic">Save to list</label></button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card"
+                data-name = "eleanor u. kennedy shelter"
+                data-type = "volunteer"
+                data-rating = "3.3"
+                data-keywords = "eleanor kennedy shelter homeless housing"
+            >
+                <div class = "card-constants">
+                    <img src = "https://news.va.gov/wp-content/uploads/sites/3/2022/08/HopeForTheWarriors-scaled.jpg">
+                    <div class="grid-dy">
+                        <h1>Eleanor U. Kennedy Shelter</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>3.3</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                </div>
+                <label class="more-info">more info<input class="check" type="checkbox"></label> 
+                
+                <div class = "card-variable">
+                    <p>Hope For The Warriors is a nonprofit that turns your hope into tangible actions that directly support U.S. military, veterans and their families.</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>8003 Forbes Pla, Springfield, VA 22151</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <p>https://www.hopeforthewarriors.org/</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@hopeforthewarriors.org</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(877) 2HOPE4W</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Mon-Fri 8a-6p</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button id="favorite"><label><input type="checkbox" id="fpic">Save to list</label></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class = "card"
+                data-name = "repair cafe"
+                data-type = "volunteer"
+                data-rating = "n/a"
+                data-keywords = "repair cafe fix electronics bikes"
+            >
+                <div class = "card-constants">
+                    <img src = "https://news.va.gov/wp-content/uploads/sites/3/2022/08/HopeForTheWarriors-scaled.jpg">
+                    <div class="grid-dy">
+                        <h1>Repair Cafe</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>N/A</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Hope For The Warriors is a nonprofit that turns your hope into tangible actions that directly support U.S. military, veterans and their families.</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>8003 Forbes Pla, Springfield, VA 22151</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <p>https://www.hopeforthewarriors.org/</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@hopeforthewarriors.org</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(877) 2HOPE4W</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Mon-Fri 8a-6p</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button id="favorite"><label><input type="checkbox" id="fpic">Save to list</label></button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card"
+                data-name = "polar plunge"
+                data-type = "event"
+                data-rating = "n/a"
+                data-keywords = "polar plunge special olympics sports athletic"
+            >
+                <div class = "card-constants">
+                    <img src = "https://news.va.gov/wp-content/uploads/sites/3/2022/08/HopeForTheWarriors-scaled.jpg">
+                    <div class="grid-dy">
+                        <h1>Polar Plunge</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>N/A</p>
+                            
+                            <span class="category">
+                                <p>Event</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Hope For The Warriors is a nonprofit that turns your hope into tangible actions that directly support U.S. military, veterans and their families.</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>8003 Forbes Pla, Springfield, VA 22151</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <p>https://www.hopeforthewarriors.org/</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@hopeforthewarriors.org</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(877) 2HOPE4W</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Mon-Fri 8a-6p</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button id="favorite"><label><input type="checkbox" id="fpic">Save to list</label></button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card"
+                data-name = "virginia adoption and grooming"
+                data-type = "event"
+                data-rating = "4.9"
+                data-keywords = "virginia adoption monthly petting"
+            >
+                <div class = "card-constants">
+                    <img src = "https://news.va.gov/wp-content/uploads/sites/3/2022/08/HopeForTheWarriors-scaled.jpg">
+                    <div class="grid-dy">
+                        <h1>Virginia Adoption & Grooming</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>4.9</p>
+                            
+                            <span class="category">
+                                <p>Event</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Hope For The Warriors is a nonprofit that turns your hope into tangible actions that directly support U.S. military, veterans and their families.</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>8003 Forbes Pla, Springfield, VA 22151</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <p>https://www.hopeforthewarriors.org/</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@hopeforthewarriors.org</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(877) 2HOPE4W</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Mon-Fri 8a-6p</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button id="favorite"><label><input type="checkbox" id="fpic">Save to list</label></button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card"
+                data-name = "caring hearts rescue"
+                data-type = "volunteer"
+                data-rating = "5.0"
+                data-keywords = "caring heart rescue dog animal animals transportation recuring recurring"
+            >
+                <div class = "card-constants">
+                    <img src = "https://news.va.gov/wp-content/uploads/sites/3/2022/08/HopeForTheWarriors-scaled.jpg">
+                    <div class="grid-dy">
+                        <h1>Caring Hearts Rescue</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>5.0</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Hope For The Warriors is a nonprofit that turns your hope into tangible actions that directly support U.S. military, veterans and their families.</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>8003 Forbes Pla, Springfield, VA 22151</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <p>https://www.hopeforthewarriors.org/</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@hopeforthewarriors.org</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(877) 2HOPE4W</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Mon-Fri 8a-6p</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button id="favorite"><label><input type="checkbox" id="fpic">Save to list</label></button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        
+        
+        
+        
+        <nav class = navbar>
+            <a href = "index.html"><img src = "navIcons/gHome.png"></a>
+            <a href = "resources.html"><img src = "navIcons/yCompass.png"></a>
+            <a href = "form.html"><img src = "navIcons/gPlus.png"></a>
+            <a href = "saved.html"><img src = "navIcons/gSaved.png"></a>
+            <a href = "profile.html"><img src = "navIcons/gProfile.png"></a>
+        </nav>
+        
+        <footer class = "foot">
+            <hr id="double">
+            <hr id="double">
+            <h1>Help Hive</h1>
+            <div class="another-div😭">
+                <div class="followHold">
+                    <p class="follow">Follow us</p>
+                    <div class = "socials-container">
+                        <a href="https://www.youtube.com/channel/UCh1q2_M9veUj20tRu81d79Q"><img class="icons" src = "socialIcons/youtube.png"></a>
+                        <a href="instagram.com"><img class="icons" src = "socialIcons/instagram.png"></a>
+                        <a href="facebook.com"><img class="icons" src = "socialIcons/facebook.png"></a>
+                        <a href="https://x.com/HELPHIVEFAIRFAX"><img class="icons" src = "socialIcons/twitter.png"></a>
+                    </div>
+                    <hr>
+                </div>
+                <div class="contactHold">
+                    <p class="contact">Contact us</p>
+                    <div class = "contactRow">
+                        <img src = "contactIcons/email.png">
+                        <p>helphive.fairfax@gmail.com</p>
+                    </div>
+                    <div class = "contactRow">
+                        <img src = "contactIcons/call.png">
+                        <p>(510)-333-9678</p>
+                    </div>
+                    <div class = "contactRow">
+                        <a href = index.html><img src = "logo.png"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
