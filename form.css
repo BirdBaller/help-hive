@@ -1,0 +1,225 @@
+@import "style.css";
+
+
+
+
+.line{
+    position: sticky;
+    width: 428px;
+    height: 5px;
+    background: pink;
+}
+
+
+
+.notes{
+    display: flex;
+    width: 90%;
+    margin-top: 20px;
+    justify-self: center;
+    
+    font-family:ADLaM-Display;
+    color: var(--accent);
+    font-size: clamp(1rem, 4.2dvw, 1.1rem);
+}
+
+
+form{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.fcard {
+    display: block;
+    background: var(--cardbg);
+    max-height: 3000px;
+    width: 320px;
+    padding-bottom: 10px;
+    border-radius: clamp(25px, 5dvw, 40px);
+    
+    font-family:ADLaM-Display;
+}
+.fcard-constants{
+    width: 320px; 
+    height: auto;
+}
+
+
+.pic{
+    display: block;
+    height: 160px;
+    border-radius: clamp(25px, 5dvw, 40px);
+    border: 1px dashed var(--txt);
+}
+.pic p{
+    color: var(--txt);
+    line-height: 1.5;
+    margin-top: 15%;
+    text-align: center;
+}
+#pic{
+    display: none;
+}
+
+.grid-dy{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.name label{
+    color: var(--txt);
+    font-size: .95rem;
+    margin: 8px 0 0 12px;
+}
+#name{
+    width: 92%;
+    padding: 2px 0 2px 0;
+    margin: 8px 0 0 5px;
+    
+    font-size: .8rem;
+    font-family:ADLaM-Display;
+}
+input:focus{
+    outline: 0;
+}
+.rating{
+    margin: 0 5% 0 5%;
+}
+.rating label{
+    color: var(--txt);
+    font-size: .95rem;
+}
+.rating img{
+    width: clamp(25px, 8.2dvw, 29px);
+    height: clamp(25px, 8.2dvw, 29px);
+}
+#rating{
+    position: relative;
+    width: 30%;
+    margin-left: 5px;
+    bottom: 6px;
+    
+    font-family:ADLaM-Display;
+}
+
+.category{
+    display: grid;
+    width: 90%;
+    margin: 0 5% 5px 5%;
+    float: right;
+    grid-template-columns: 40% 30% 30%;
+    
+}
+.category label{
+    color: var(--txt);
+    font-size: .95rem;
+}
+.category input{
+    height: 1rem;
+    padding: 2px 0 2px 0;
+    font-family:ADLaM-Display;
+}
+
+.more-info{
+    display: flex;
+    background: var(--accent);
+    width: 80%;
+    margin: auto;
+    padding: 1px 2px 1px 2px;
+    border-radius: 20px;
+    justify-content: center;
+    
+    color: var(--pure);
+    font-size: 1.4rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.desc{
+    color: var(--txt);
+    font-size: .95rem;
+    margin-left: 28%;
+}
+#desc{
+    font-family:ADLaM-Display;
+    width: 90%;
+    margin-left: 4%;
+    margin-bottom: 10px;
+}
+
+.fcard-variable{
+    max-height: 1000px;
+}
+.infoRow{
+    display: flex;
+    word-break: break-all;
+    margin-bottom: 5px;
+    margin-left: 5%;
+    
+    align-items: center;
+}
+.infoRow img{
+    width: 9dvw;
+    height: 9dvw;
+    border-radius: 50%;
+}
+.infoRow label{
+    color: var(--accent);
+    font-size: .95rem;
+}
+.infoRow input{
+    font-family:ADLaM-Display;
+    margin-left: 5px;
+    
+}
+
+#url{
+    width: 145px;
+}
+#email{
+    width: 195px;
+}
+#phoneNum{
+    width: 130px;
+}
+#hours{
+    width: 190px;
+}
+
+.fcard-variable button{
+    display: flex;
+    background: var(--txt);
+    padding: 5px 10px 5px 10px;
+    margin: 6px auto 5px auto;
+    justify-content: center;
+    border-radius: 5px;
+    
+    font-family:ADLaM-Display;
+    font-size: 1.3rem;
+    color: var(--pure);
+    cursor: pointer;
+}
+
+
+
+@media(min-width: 728px){
+    .fcard{
+        border-width: 20px;
+    }
+    
+    .rating img{
+        width: 28px;
+        height: 28px;
+    }
+    
+    .rows{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .infoRow img{
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+    }
+    
+}
