@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Help Hive</title>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "form.css">
+        <script src = "script.js" defer></script>
+    </head>
+
+    <body>
+        <header class = "topbar">
+            <img src = "logo.png">
+            <h1>Help Hive</h1>
+            
+            <div class="links">
+                <a href="index.html">home</a>
+                <a href="resources.html">resources</a>
+                <a href="form.html">form</a>
+                <a href="saved.html">saved</a>
+            </div>
+            <a href="profile.html" class="profile">
+                <img src="navIcons/gProfile.png">
+                <p>profile</p>
+            </a>
+        </header>
+        
+        <div class="topSlogan">
+            <div class = "resourceSlogan">
+                <p>Let others
+                <HL>know</HL>
+                </p>
+            </div>
+            <hr>
+        </div>
+        
+        
+        
+        
+        <div class = "notes">
+            If you do not have information for any of the following fields, please type "N/A".
+        </div>
+        
+        <form>
+            <div class = "fcard">
+                <div class = "fcard-constants">
+                    <label class="pic" for="pic">
+                        <p>Insert<br>picture of resource</p>
+                    </label>
+                        
+                    <input type="file" id="pic">
+                    
+                    <div class="grid-dy">
+                        <span class="name">
+                            <label for="name">Name of resource</label>
+                            <input type="text" id="name">
+                        </span>
+                        <span class = "rating">
+                            <label for="rating">Rating out of 5.0</label>
+                            <img src = "cardIcons/star.png">
+                            <input id="rating" type="text">
+                        </span>
+                    </div>
+                    <span class="category">
+                        <label for="category">Category of resource</label>
+                        <input type="text" id="category">
+                    </span>
+                </div>
+                <div class = "fcard-variable">
+                    <label class="desc" for="desc">Brief description</label>
+                    <input type = "text" id="desc">
+                    
+                    <div class="rows">
+                        <div class = "infoRow">
+                            <img src = "cardIcons/location.png">
+                            <label for="address">Address</label>
+                            <input type="text" id="address">
+                        </div>
+                        <div class = "infoRow">
+                            <img src = "cardIcons/website.png">
+                            <label for="url">Website URL</label>
+                            <input type = "text" id="url">
+                        </div>
+                        <div class = "infoRow">
+                            <img src = "cardIcons/gEmail.png">
+                            <label for="email">Email</label>
+                            <input type = "text" id="email">
+                        </div>
+                        <div class = "infoRow">
+                            <img src = "cardIcons/gCall.png">
+                            <label for="phoneNum">Phone number</label>
+                            <input type = "text" id="phoneNum">
+                        </div>
+                        <div class = "infoRow">
+                            <img src = "cardIcons/clock.png">
+                            <label for="hours" placeholder = "Mon-Fri 8a-9p">Hours</label>
+                            <input type = "text" id="hours">
+                        </div>
+                    </div>
+                    
+                    <button type = "button">Submit!</button>
+                    
+                </div>
+            </div>
+        </form>
+        
+        <div class = "confirmation">
+            <p>Submitted!</p>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class = navbar>
+            <a href = "index.html"><img src = "navIcons/gHome.png"></a>
+            <a href = "resources.html"><img src = "navIcons/gCompass.png"></a>
+            <a href = "form.html"><img src = "navIcons/yPlus.png"></a>
+            <a href = "saved.html"><img src = "navIcons/gSaved.png"></a>
+            <a href = "profile.html"><img src = "navIcons/gProfile.png"></a>
+        </nav>
+        
+        <footer class = "foot">
+            <hr id="double">
+            <hr id="double">
+            <h1>Help Hive</h1>
+            <div class="another-div😭">
+                <div class="followHold">
+                    <p class="follow">Follow us</p>
+                    <div class = "socials-container">
+                        <a href="https://www.youtube.com/channel/UCh1q2_M9veUj20tRu81d79Q"><img class="icons" src = "socialIcons/youtube.png"></a>
+                        <a href="instagram.com"><img class="icons" src = "socialIcons/instagram.png"></a>
+                        <a href="facebook.com"><img class="icons" src = "socialIcons/facebook.png"></a>
+                        <a href="https://x.com/HELPHIVEFAIRFAX"><img class="icons" src = "socialIcons/twitter.png"></a>
+                    </div>
+                    <hr>
+                </div>
+                <div class="contactHold">
+                    <p class="contact">Contact us</p>
+                    <div class = "contactRow">
+                        <img src = "contactIcons/email.png">
+                        <p>helphive.fairfax@gmail.com</p>
+                    </div>
+                    <div class = "contactRow">
+                        <img src = "contactIcons/call.png">
+                        <p>(510)-333-9678</p>
+                    </div>
+                    <div class = "contactRow">
+                        <a href = index.html><img src = "logo.png"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
