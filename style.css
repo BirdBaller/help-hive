@@ -1,0 +1,371 @@
+@font-face {font-family:Shrikhand; src: url("https://codehs.com/uploads/ab37fc28e53c8a990f26fe545aea92a5"); }
+@font-face {font-family:ADLaM-Display; src: url("https://codehs.com/uploads/99775bdf00e6c810a7454be12a6b7ed4");}
+:root{
+    --headfoot: #181818;
+    --bg: #272727;
+    --cardbg: #313131;
+    --accent: #FFD600;
+    --laccent: #ffe768;
+    --txt: #fff;
+    --pure #000;
+    --topbar-height:16.4vw;
+    
+    /*temp stuff or idk i just do*/
+    --upup: -20px;
+}
+
+body{
+    background-color: var(--bg);
+    padding-top:var(--topbar-height);
+    padding-bottom: calc(100vh);
+    margin: 0;
+    overflow-x: hidden;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+}
+
+@keyframes rainbow{
+    0% {background: red}
+    16.6% {background: orange}
+    33.2% {background: yellow}
+    49.8% {background: green}
+    66.4% {background: blue}
+    83% {background: purple}
+    100%{background: red}
+}/*idk i just do*/
+
+
+html::-webkit-scrollbar{
+    width: clamp(4px, .4dvw, 12px);
+    background: var(--headfoot);
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--cardbg);
+}
+
+@supports (-moz-appearance:none) {
+    html{
+        scrollbar-width: thin;
+        scrollbar-color: var(--cardbg) var(--headfoot);
+    }
+}
+
+
+HL{
+    color: var(--accent);
+}
+
+img, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan{
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+}
+.topbar h1::selection, .contactRow p::selection{
+    background: var(--cardbg);
+}
+.infoRow::selection{
+    background: var(--headfoot);
+}
+
+#search, #filter, .check{
+    display: none;
+}/* usually just inputs, but anything that yhou never want to display*/
+
+
+@media(min-width: 728px){
+    
+    body{
+        padding: 0;
+    }
+    .navbar{
+        display: none;
+    }
+    
+    .topbar{
+        position: fixed;
+        display: flex;
+        background: var(--headfoot);
+        width: 100%;
+        height: clamp(55px, 4dvw, 80px);
+        padding: 5px;
+        top: 0;
+        z-index: 67;
+    }
+    .topbar h1{
+        font-family: Shrikhand;
+        color: var(--accent);
+        font-size: clamp(2rem, 2.3dvw, 2.4rem);
+        margin-top: clamp(2px, 1dvw, 8px);
+        cursor: default;
+        user-select: text;
+    }
+    .links{
+        margin-left: auto;
+        line-height: 2.6;
+        cursor: default;
+    }
+    .links a{
+        height: clamp(1.3rem, 1.7dvw, 1.7rem);
+        margin-right: 14px;
+        cursor: pointer;
+        
+        font-family: ADLaM-Display;
+        color: var(--txt);
+        font-size: clamp(1.2rem, 1.6dvw, 1.4rem);
+        text-decoration: none;
+    }
+    .links a:last-child{
+        margin: 0;
+    }
+    
+    .profile{
+        display: flex;
+        width: 50px;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 8px 0 5%;
+        text-decoration: none;
+    }
+    .profile img{
+        width: clamp(35px, 2.6dvw, 40px);
+        height: clamp(35px, 2.6dvw, 40px);
+        margin-top: 2%;
+        border-radius: 50%;
+    }
+    .profile p{
+        font-family:ADLaM-Display;
+        color: var(--txt);
+        font-size: clamp(.8rem, 1dvw, .9rem); 
+        margin-top: 1px;
+    }
+    
+    .topSlogan p{
+        font-family: ADLaM-Display;
+        color: var(--txt);
+        font-size: clamp(1.6rem, 2dvw, 2rem);
+        margin: clamp(15px, 2dvw, 28px) 0 clamp(8px, 1.3dvw, 12px) 0;
+        text-align: center;
+    }
+    
+    
+    .foot hr{
+        display: none;
+    }
+    .foot{
+        background: var(--headfoot);
+        width: 100%;
+        bottom: 0;
+        cursor: default;
+    }
+    .foot h1{
+        font-family: Shrikhand;
+        color: var(--accent);
+        font-size: clamp(2.4rem, 3.4dvw, 3.4rem);
+        text-align: center;
+        margin: 0;
+    }
+    .foot p{
+        font-family: ADLaM-Display;
+        color: var(--accent);
+        font-size: clamp(1.5rem, 1.7dvw, 1.9rem);
+    }
+    
+    .another-div😭{
+        display: flex;
+        gap: clamp(30px, 5dvw, 80px);
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+    .follow{
+        width: 300px;
+        border-bottom: 2px solid var(--txt);
+        margin-left: clamp(8px, 1dvw, 15px);
+        padding-left: clamp(8px, 1.1dvw, 16px);
+    }
+    .socials-container{
+        display: flex;
+        gap: 20px;
+        margin-left: clamp(15px, 1.45dvw, 28px);
+    }
+    .socials-container img{
+        width: 50px;
+        height: 50px;
+        padding: 4px;
+        border-radius: 50%;
+        transition: .4s;
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        -o-transition: .4s;
+    }
+    .socials-container img:hover{
+        background: var(--cardbg);
+        
+    }
+    
+    .contact{
+        width: 350px;
+        margin-left: clamp(8px, 1dvw, 15px);
+        padding-left: clamp(8px, 1.1dvw, 16px);
+        border-bottom: 2px solid var(--txt);
+    }
+    .contactRow{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    .contactRow img{
+        width: 50px;
+        height: 50px;
+        margin-left: 15px;
+    }
+    .contactRow p{
+        color: var(--txt);
+        font-size: 1.2rem;
+        margin-left: 10px;
+        user-select: text;
+    }
+    .contactRow:last-child{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 500px){
+    .topbar a{
+        display: none;
+    }
+
+
+    .topbar{
+        position: fixed;
+        display: flex;
+        background-color: var(--headfoot);
+        width:100%;
+        height: var(--topbar-height);
+        left: 0;
+        top: 0;
+        border-radius: 0vw 0vw 2vw 2vw;
+        gap:3.75vw;
+        align-items: center;
+        z-index:100;
+        
+        font-family: Shrikhand;
+        color: var(--accent);
+        transition-duration:0.5s;
+        -webkit-transition-duration:0.5s;
+        -moz-transition-duration:0.5s;
+        -o-transition-duration:0.5s;
+    }
+    .topbar img {
+        max-width: 20%;
+        height: auto;
+        margin-left: 12%;
+    }
+    .topbar h1{
+        font-size:9.4dvw;
+        padding-right: 12dvw;
+    }
+    .top-hide {
+        transform: translateY(calc(-1 * var(--topbar-height)));
+        -webkit-transform: translateY(calc(-1 * var(--topbar-height)));
+        -moz-transform: translateY(calc(-1 * var(--topbar-height)));
+        -o-transform: translateY(calc(-1 * var(--topbar-height)));
+    }
+    
+    .topSlogan p{
+        font-family:ADLaM-Display;
+        color: var(--txt);
+        font-size:6.154vw;
+        margin-bottom: clamp(6px, 1dvw, 10px);
+        text-align: center;
+    }
+    
+    .navbar{
+        position: fixed;
+        display: flex;
+        background-color: var(--headfoot);
+        width:100%;
+        left: 0;
+        bottom: 0;
+        padding-bottom:6vw;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 100;
+    }
+    .navbar img{
+        width: 12.3vw;
+        height: 12.3vw;
+    }
+    .foot h1{
+        font-family: Shrikhand;
+        color: var(--accent);
+        font-size:8vw;
+        text-align: center;
+    }
+    .foot p{
+        font-family: ADLaM-Display;
+        color: white;
+        font-size: 4vw;
+        text-align: center;
+    }
+    .socials-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .socials-container img{
+        width: 12.308vw;
+        height: 12.308vw;
+    }
+    .foot hr{
+        background: #fff;
+        color: #fff;
+        max-width: 50%;
+        height: 1.026vw;
+        border-radius: 2vw;
+    }
+    #double {
+        background:#545454;
+        max-width: 10%;
+        height: 1.026vw;
+        margin: 1vw;
+        margin-left: 45%;
+        border: 1vw;
+        align-items: center;
+    }
+    .foot{
+        position: fixed;
+        background: #000;
+        height: 100vh;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom:0;
+        top:96vh;
+        border-radius:  0 0 0 0;
+        z-index:100;
+        cursor: ns-resize;
+        transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+    }
+    .foot-open{
+        transform: translateY(-88vh);
+        -webkit-transform: translateY(-88vh);
+        -moz-transform: translateY(-88vh);
+        -o-transform: translateY(-88vh);
+    }
+}
