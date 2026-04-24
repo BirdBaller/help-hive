@@ -26,6 +26,7 @@
             </a>
         </header>
         
+        
         <div class="topSlogan">
             <div class = "resourceSlogan">
                 <p>Your
@@ -36,30 +37,14 @@
         </div>
         
         
-        <div id="savedGrid" class="container">
+        
+        <div id="savedGrid" class="results">
             
         </div>
         
-        <script>
-            const savedGrid = document.getElementById('savedGrid');
-            const savedData = JSON.parse(localStorage.getItem('mySavedResources')) || [];
-
-            if (savedData.length === 0) {
-                savedGrid.innerHTML = "<p class='unsaved'>You haven't saved anything yet!</p>";
-            } else {
-                savedData.forEach(item => {
-                    savedGrid.innerHTML += `
-                        <div class="card">
-                            <h1>${item.title}</h1>
-                            <p>${item.desc}</p>
-                        </div>`;
-                });
-            }
-        </script> 
         
         
-        
-        
+        <p class="gap"></p>
         <nav class = navbar>
             <a href = "index.html"><img src = "navIcons/gHome.png"></a>
             <a href = "resources.html"><img src = "navIcons/gCompass.png"></a>
@@ -67,6 +52,7 @@
             <a href = "saved.html"><img src = "navIcons/ySaved.png"></a>
             <a href = "profile.html"><img src = "navIcons/gProfile.png"></a>
         </nav>
+        
         <footer class = "foot">
             <hr id="double">
             <hr id="double">
@@ -100,3 +86,10 @@
         </footer>
     </body>
 </html>
+
+
+
+
+
+
+
