@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<Html>
     <head>
         <title>Help Hive</title>
         <meta charset = "UTF-8">
@@ -28,11 +28,15 @@
         
         <div class = "hero">
             <img src="heroImage.png">
-            <p>We are here for you <br> <HL>Fairfax</HL> </p>
-            <br><br>
-            <p>What's the <HL>buzz</HL> about?</p>
+            <span class="herop">
+                <p>We are here for you <br> <HL>Virginia</HL> </p>
+                <br><br>
+                <p>What's the <HL>buzz</HL> about?</p>
+            </span>
+            
         </div>
-        <hr>
+        <hr id="thatonespecificline">
+        
         
         <div class = "cta">
             <p>Help Hive is a collection of Fairfax's community resources such as non profit, event, and program to allow you to help yourself and others.</p>
@@ -81,7 +85,7 @@
                     </div>
                     
                     <div class="favorite">
-                        <button id="favorite"><label><input type="checkbox" id="fpic">Save to list</label></button>
+                        <button onclick="saveFromCard('card1')">Save to list</button>
                     </div>
                     
                 </div>
@@ -90,7 +94,7 @@
             
             <div class = "card" id="card2">
                 <div class = "card-constants">
-                    <img src = "https://news.va.gov/wp-content/uploads/sites/3/2022/08/HopeForTheWarriors-scaled.jpg">
+                    <img src = "https://i.ibb.co/sYLR27k/Screenshot-2026-04-23-10-13-20-AM.png">
                     <div class="grid-dy">
                         <h1>Virginia Adoption & Grooming</h1>
                         <span class = "rating">
@@ -105,11 +109,11 @@
                 </div>
                 <label class="more-info">more info<input class="check" type="checkbox"></label>
                 <div class = "card-variable">
-                    <p>Hope For The Warriors is a nonprofit that turns your hope into tangible actions that directly support U.S. military, veterans and their families.</p>
+                    <p>Virginia Adoption & Grooming is a monthly cozy non-profit event of animal lovers where you can see and adopt these cut critters</p>
                     
                     <div class = "infoRow">
                     <img src = "cardIcons/location.png">
-                    <p>8003 Forbes Pla, Springfield, VA 22151</p>
+                    <p>1234 Sesame St., Springfield, VA 22151</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/website.png">
@@ -117,19 +121,19 @@
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/gEmail.png">
-                        <p>info@hopeforthewarriors.org</p>
+                        <p>info@VAgroomingAdoption.org</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/gCall.png">
-                        <p>(877) 2HOPE4W</p>
+                        <p>420-123-4567</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/clock.png">
-                        <p>Mon-Fri 8a-6p</p>
+                        <p>first monday monthly 9a-5p</p>
                     </div>
                     
                     <div class="favorite">
-                        <button id="favorite"><label><button onclick="saveFromCard('card1)">Save to list</button> id="fpic">Save to list</label></button>
+                        <button onclick="saveFromCard('card2')">Save to list</button>
                     </div>
                     
                 </div>
@@ -137,7 +141,7 @@
             
             <div class = "card" id="card3">
                 <div class = "card-constants">
-                    <img src = "https://news.va.gov/wp-content/uploads/sites/3/2022/08/HopeForTheWarriors-scaled.jpg">
+                    <img src = "https://static.wixstatic.com/media/7c80a4_cd8199462fd84dd598b281b754fcfe5f.png/v1/fill/w_80,h_82,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/7c80a4_cd8199462fd84dd598b281b754fcfe5f.png">
                     <div class="grid-dy">
                         <h1>Caring Hearts Rescue</h1>
                         <span class = "rating">
@@ -152,31 +156,31 @@
                 </div>
                 <label class="more-info">more info<input class="check" type="checkbox"></label>
                 <div class = "card-variable">
-                    <p>Hope For The Warriors is a nonprofit that turns your hope into tangible actions that directly support U.S. military, veterans and their families.</p>
+                    <p>Caring Hearts Rescue helps rescue small dogs and help them find homes and families. Volunteer to help fosture your own little dogs.</p>
                     
                     <div class = "infoRow">
                     <img src = "cardIcons/location.png">
-                    <p>8003 Forbes Pla, Springfield, VA 22151</p>
+                    <p>6412 Brandon Avenue #182, Springfield, VA 22150</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/website.png">
-                        <p>https://www.hopeforthewarriors.org/</p>
+                        <p>caringheartsrescue.org</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/gEmail.png">
-                        <p>info@hopeforthewarriors.org</p>
+                        <p>caringheartsrescue@aol.com</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/gCall.png">
-                        <p>(877) 2HOPE4W</p>
+                        <p>(703) 574-5874</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/clock.png">
-                        <p>Mon-Fri 8a-6p</p>
+                        <p>No Information Provided</p>
                     </div>
                     
                     <div class="favorite">
-                        <button id="favorite"><label><input type="checkbox" id="fpic">Save to list</label></button>
+                        <button onclick="saveFromCard('card3')">Save to list</button>
                     </div>
                     
                 </div>
@@ -190,11 +194,15 @@
             </span>
         </div>
         
+        
+        
         <div class="index-form">
             <p> Let others <HL>know</HL> the unknown</p>
             <a href = "form.html"><img src = "rfIcon.png"></a>
             <p>Fill out the Resource Form</p>
         </div>
+        
+        
         
         <nav class = "navbar">
             <a href = "index.html"><img src = "navIcons/yHome.png"></a>
