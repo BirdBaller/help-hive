@@ -57,7 +57,7 @@ HL{
     color: var(--accent);
 }
 
-img, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan{
+img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .category{
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -74,86 +74,15 @@ img, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan{
     display: none;
 }/* usually just inputs, but anything that yhou never want to display*/
 
-
-@media(min-width: 728px){
-    
+@media(min-width: 500px){
     body{
         padding: 0;
     }
-    .navbar{
+    .navbar, .foot hr{
         display: none;
     }
     
-    .topbar{
-        position: fixed;
-        display: flex;
-        background: var(--headfoot);
-        width: 100%;
-        height: clamp(55px, 4dvw, 80px);
-        padding: 5px;
-        top: 0;
-        z-index: 67;
-    }
-    .topbar h1{
-        font-family: Shrikhand;
-        color: var(--accent);
-        font-size: clamp(2rem, 2.3dvw, 2.4rem);
-        margin-top: clamp(2px, 1dvw, 8px);
-        cursor: default;
-        user-select: text;
-    }
-    .links{
-        margin-left: auto;
-        line-height: 2.6;
-        cursor: default;
-    }
-    .links a{
-        height: clamp(1.3rem, 1.7dvw, 1.7rem);
-        margin-right: 14px;
-        cursor: pointer;
-        
-        font-family: ADLaM-Display;
-        color: var(--txt);
-        font-size: clamp(1.2rem, 1.6dvw, 1.4rem);
-        text-decoration: none;
-    }
-    .links a:last-child{
-        margin: 0;
-    }
     
-    .profile{
-        display: flex;
-        width: 50px;
-        align-items: center;
-        flex-direction: column;
-        margin: 0 8px 0 5%;
-        text-decoration: none;
-    }
-    .profile img{
-        width: clamp(35px, 2.6dvw, 40px);
-        height: clamp(35px, 2.6dvw, 40px);
-        margin-top: 2%;
-        border-radius: 50%;
-    }
-    .profile p{
-        font-family:ADLaM-Display;
-        color: var(--txt);
-        font-size: clamp(.8rem, 1dvw, .9rem); 
-        margin-top: 1px;
-    }
-    
-    .topSlogan p{
-        font-family: ADLaM-Display;
-        color: var(--txt);
-        font-size: clamp(1.6rem, 2dvw, 2rem);
-        margin: clamp(15px, 2dvw, 28px) 0 clamp(8px, 1.3dvw, 12px) 0;
-        text-align: center;
-    }
-    
-    
-    .foot hr{
-        display: none;
-    }
     .foot{
         background: var(--headfoot);
         width: 100%;
@@ -172,12 +101,13 @@ img, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan{
         color: var(--accent);
         font-size: clamp(1.5rem, 1.7dvw, 1.9rem);
     }
-    
+
     .another-div😭{
         display: flex;
         gap: clamp(30px, 5dvw, 80px);
         justify-content: center;
         padding-bottom: 30px;
+        flex-wrap: wrap;
     }
     .follow{
         width: 300px;
@@ -202,7 +132,6 @@ img, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan{
     }
     .socials-container img:hover{
         background: var(--cardbg);
-        
     }
     
     .contact{
@@ -230,7 +159,121 @@ img, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan{
     .contactRow:last-child{
         display: none;
     }
+    
+    
+    
+    @media(max-width: 620px){
+        .topbar a{
+            display: none;
+        }
+        .topbar{
+            position: fixed;
+            display: flex;
+            background-color: var(--headfoot);
+            width:100%;
+            height: clamp(1px, var(--topbar-height), 80px);
+            left: 0;
+            top: 0;
+            border-radius: 0vw 0vw 2vw 2vw;
+            gap:3.75vw;
+            justify-content: center;
+            align-items: center;
+            z-index:67;
+        
+            font-family: Shrikhand;
+            color: var(--accent);
+            transition-duration:0.5s;
+            -webkit-transition-duration:0.5s;
+            -moz-transition-duration:0.5s;
+            -o-transition-duration:0.5s;
+        }
+        .topbar img {
+            width: clamp(1px, 17%, 85px);
+            margin-left: 12%;
+        }
+        .topbar h1{
+            font-size: clamp(1rem, 9.4dvw, 2.6rem);
+            padding-right: 12dvw;
+        }
+        .top-hide{
+            transform: translateY(calc(-1 * var(--topbar-height)));
+            -webkit-transform: translateY(calc(-1 * var(--topbar-height)));
+            -moz-transform: translateY(calc(-1 * var(--topbar-height)));
+            -o-transform: translateY(calc(-1 * var(--topbar-height)));
+        }
+    }
+    
+    @media(min-width: 620px){
+        
+        .topbar{
+            position: fixed;
+            display: flex;
+            background: var(--headfoot);
+            width: 100%;
+            height: clamp(55px, 4dvw, 80px);
+            padding: 5px;
+            top: 0;
+            z-index: 67;
+        }
+        
+        .topbar h1{
+            font-family: Shrikhand;
+            color: var(--accent);
+            font-size: clamp(2rem, 2.3dvw, 2.4rem);
+            margin-top: clamp(2px, 1dvw, 8px);
+            cursor: default;
+            user-select: text;
+        }
+        .links{
+            margin-left: auto;
+            line-height: 2.6;
+            cursor: default;
+        }
+        .links a{
+            height: clamp(1.3rem, 1.7dvw, 1.7rem);
+            margin-right: 14px;
+            cursor: pointer;
+        
+            font-family: ADLaM-Display;
+            color: var(--txt);
+            font-size: clamp(1.2rem, 1.6dvw, 1.4rem);
+            text-decoration: none;
+        }
+        .links a:last-child{
+            margin: 0;
+        }
+    
+        .profile{
+            display: flex;
+            width: 50px;
+            align-items: center;
+            flex-direction: column;
+            margin: 0 8px 0 5%;
+            text-decoration: none;
+        }
+        .profile img{
+            width: clamp(35px, 2.6dvw, 40px);
+            height: clamp(35px, 2.6dvw, 40px);
+            margin-top: 2%;
+            border-radius: 50%;
+        }
+        .profile p{
+            font-family:ADLaM-Display;
+            color: var(--txt);
+            font-size: clamp(.8rem, 1dvw, .9rem); 
+            margin-top: 1px;
+        }
+    
+        .topSlogan p{
+            font-family: ADLaM-Display;
+            color: var(--txt);
+            font-size: clamp(1.6rem, 2dvw, 2rem);
+            margin: clamp(15px, 2dvw, 28px) 0 clamp(8px, 1.3dvw, 12px) 0;
+            text-align: center;
+        }
+    }
 }
+
 
 
 
@@ -299,25 +342,25 @@ img, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan{
         width:100%;
         left: 0;
         bottom: 0;
-        padding-bottom:6vw;
+        padding-bottom:6dvw;
         align-items: center;
         justify-content: space-around;
         z-index: 100;
     }
     .navbar img{
-        width: 12.3vw;
-        height: 12.3vw;
+        width: 12.3dvw;
+        height: 12.3dvw;
     }
     .foot h1{
         font-family: Shrikhand;
         color: var(--accent);
-        font-size:8vw;
+        font-size:8dvw;
         text-align: center;
     }
     .foot p{
         font-family: ADLaM-Display;
         color: white;
-        font-size: 4vw;
+        font-size: 4dvw;
         text-align: center;
     }
     .socials-container{
@@ -326,15 +369,15 @@ img, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan{
         justify-content: space-around;
     }
     .socials-container img{
-        width: 12.308vw;
-        height: 12.308vw;
+        width: 12.308dvw;
+        height: 12.308dvw;
     }
     .foot hr{
         background: #fff;
         color: #fff;
         max-width: 50%;
-        height: 1.026vw;
-        border-radius: 2vw;
+        height: 1.026dvw;
+        border-radius: 2dvw;
     }
     #double {
         background:#545454;
