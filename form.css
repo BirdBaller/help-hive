@@ -223,3 +223,9 @@ input:focus{
     }
     
 }
+
+@media(min-width: 1000px){
+    .gap{
+        padding-bottom: 20dvh;
+    }
+}
