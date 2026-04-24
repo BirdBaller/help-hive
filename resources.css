@@ -1,12 +1,6 @@
 @import "style.css";
 
 
-label::selection{
-    background: none;
-}
-
-
-
 .nav-link{
     display: block;
     background: var(--cardbg);
@@ -30,7 +24,6 @@ label::selection{
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-    
 }
 
 
@@ -43,20 +36,27 @@ label::selection{
     border-radius: clamp(25px, 5dvw, 40px);
 
     font-family:ADLaM-Display;
-    transition: .5s ease-in-out;
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
+    transition-property: border-radius;
+    transition-duration: .3s;
+    transition-delay: .4s;
+    -webkit-transition-property: border-radius;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-delay: .4s;
+    -moz-transition-property: border-radius;
+    -moz-transition-duration: .3s;
+    -moz-transition-delay: .4s;
+    -o-transition-property: border-radius;
+    -o-transition-duration: .3s;
+    -o-transition-delay: .4s;
 }
 .card-constants{
     width: clamp(240px, 62dvw, 280px); 
-    height: auto;
 }
-.card-constants img{
+.card-constants > img{
+    background: var(--txt);
     width: 90%; 
-    height: 55%; 
-    margin-top: 4.5%;
-    margin-left: 4.75%;
+    aspect-ratio: 16/9;
+    margin: 4.5% 0 0 5%;
     border-radius: clamp(25px, 5dvw, 40px);
 }
 
@@ -118,18 +118,32 @@ label::selection{
 }
 
 .card:has(.check:checked){
-    max-height: 1500px;
+    border-radius: clamp(25px, 5dvw, 40px) clamp(25px, 5dvw, 40px) 0 0;
+    transition-duration: 0s;
+    transition-delay: 0s;
+    -webkit-transition-duration: 0s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-duration: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-duration: 0s;
+    -o-transition-delay: 0s;
 }
 .card:has(.check:checked) .card-variable{
     max-height: 1000px;
+    box-shadow: 0 5px  3px var(--bg);
 }
 .card-variable{
+    position: absolute;
+    background: var(--cardbg);
     max-height: 0;
+    width: clamp(240px, 62dvw, 280px);
+    border-radius: 0 0 clamp(25px, 5dvw, 40px) clamp(25px, 5dvw, 40px);
     overflow: hidden;
-    transition: .5s ease-in-out;
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
+    z-index: 5;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
 }
 .card-variable p{
     font-size: .85rem;
@@ -145,47 +159,33 @@ label::selection{
     
     align-items: center;
 }
+.infoRow a{
+    color: var(--accent);
+    font-size: .85rem;
+    width: auto;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-decoration: none;
+    
+}
 
 .favorite{
     display: flex;
-    width: 100%;
-    height: 45px;
+    margin: 4px 0 8px 0;
+    justify-content: center;
 }
-
-#fpic::after{
-    content: "";
-    position: absolute;
-    background-image: url("https://codehs.com/uploads/a2234d0376f253632b80595f170789b6");
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    margin: 2px 0 0 8px;
-}
-#fpic:checked::after{
-    background-image: url("https://codehs.com/uploads/7fda0a6538a9e896c21bb525fe2e08a3");
-}
-#favorite label{
-    width: 100%;
-    height: 100%;
-    padding: 5px 0 5px 0;
-        
+.favorite button{
+    background: var(--accent);
+    width: 70%;
+    padding: 7px 0 7px 0;
+    border-radius: 20px;
+    border: none;
+    
     font-family:ADLaM-Display;
+    color: var(--pure);
     font-size: 1.2rem;
     cursor: pointer;
 }
-#favorite{
-    display: flex;
-    background: var(--accent);
-    width: 70%;
-    margin: auto 0 auto 20%;
-    border-radius: 20px;
-    justify-content: center;
-    color: var(--pure);
-}
-#favorite:has(#fpic:checked){
-    background: var(--bg);
-    color: var(--txt);
-}
-    
     
 
 
@@ -255,8 +255,8 @@ label::selection{
     }
 
     .infoRow img{
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
     }
     
@@ -409,9 +409,8 @@ label::selection{
     }
 
     .infoRow img{
-        width: 9dvw;
-        height: 9dvw;
-        border-radius: 50%;
+        width: clamp(30px, 7dvw, 40px);
+        height: clamp(30px, 7dvw, 40px);
     }
     
     #fpic{
