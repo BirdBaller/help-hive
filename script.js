@@ -69,6 +69,7 @@ function doGet() {
 }
 
 
+window.onload = loadSavedCards;
 function closeButton(x){
   const card = x.parentElement.parentElement.parentElement.parentElement;
   card.classList.remove("expanded");
@@ -218,3 +219,34 @@ function filterResources() {
 
 
 renderSaved();
+// Buttons listeners Resources... still not done
+/*
+function filterByType(button){
+    const id = button.target.id;
+    const searchTerm = document.getElementById('searchBar').value.toLowerCase();
+    
+    const filtered = resources.filter(item => {
+        return item.category.includes(id);
+    });
+    
+    displayCards(filtered);
+}
+*/
+// Trying to add a button that can remove saved elements from users list
+/*
+function removeSave(id){
+    const itemToDelete = resources.find(item => item.id !== id);
+    let savedList = JSON.parse(localStorage.getItem('mySavedResources'));
+    for(item < 5, item = 0, item ++){
+        println("removed" + str(id) + "from list")
+    }
+    savedList.push(itemToDelete);
+    alert(itemToDelete.title + " has been removed from your list!");
+}
+*/
+/*
+const rvolunteer = document.addEventListener("click", filterByType());
+const rvtrEvt = document.addEventListener("click", filterByType());
+const revent = document.addEventListener("click", filterByType());
+*/
+  
