@@ -3,15 +3,6 @@
 
 
 
-.line{
-    position: sticky;
-    width: 428px;
-    height: 5px;
-    background: pink;
-}
-
-
-
 .notes{
     display: flex;
     width: 90%;
