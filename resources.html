@@ -12,7 +12,6 @@
         <header class = "topbar">
             <img src = "logo.png">
             <h1>Help Hive</h1>
-            
             <div class="links">
                 <a href="index.html">home</a>
                 <a href="resources.html">resources</a>
@@ -30,7 +29,6 @@
         </div>
         
         
-        
         <div class="ibecontainin">
             <div class = "functions">
                 <label for="filter"><img src="resourcePageIcons/gFilter.png">Filter</label>
@@ -43,7 +41,6 @@
         
             <input type="checkbox" id="filter"> <!-- has to be above filters (i dont wanna change the code :d)-->
             <div class = "filters"> 
-                <button type="button">Return to page(do we need this?)</button>
     
                 <button type="button" id="vtrBtn">Volunteer</button>
                 <button type="button" id="vtrEvt">Volunteer/Event</button>
@@ -78,7 +75,7 @@
         
         <div class = "results">
             <!--The code under and including line 51 to 106 is a demonstrative example of the html and how it should be filled in-->
-            <div class = "card"
+            <div class = "card" id = "card1"
                 data-name = "hope for the warriors"
                 data-type = "volunteer"
                 data-rating = "5.0"
@@ -86,6 +83,7 @@
             >
                 <div class = "card-constants">
                     <img src = "https://news.va.gov/wp-content/uploads/sites/3/2022/08/HopeForTheWarriors-scaled.jpg">
+                    
                     <div class="grid-dy">
                         <h1>Hope for the Warriors</h1>
                         <span class = "rating">
@@ -112,7 +110,7 @@
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/website.png">
-                        <p>https://www.hopeforthewarriors.org/</p>
+                        <a href="https://www.hopeforthewarriors.org" target="_blank">https://www.hopeforthewarriors.org/</a>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/gEmail.png">
@@ -128,13 +126,13 @@
                     </div>
                     
                     <div class="favorite">
-                        <button id="favorite"><label><input type="checkbox" id="fpic">Save to list</label></button>
+                        <button onClick="saveFromCard('card1')">Save</button>
                     </div>
                     
                 </div>
             </div>
             
-            <div class = "card"
+            <div class = "card" id = "card2"
                 data-name = "little free pantry"
                 data-type = "volunteer"
                 data-rating = "n/a"
@@ -160,44 +158,44 @@
                 
                 <label class="more-info">more info<input class="check" type="checkbox"></label>
                 <div class = "card-variable">
-                    <p>Hope For The Warriors is a nonprofit that turns your hope into tangible actions that directly support U.S. military, veterans and their families.</p>
+                    <p>Help the local community by donating food to the little free pantry or by help organize and manage the food. Take what you need, Give what you can</p>
                     
                     <div class = "infoRow">
                     <img src = "cardIcons/location.png">
-                    <p>8003 Forbes Pla, Springfield, VA 22151</p>
+                    <p>901 Wythe St, Alexandria, VA 22314</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/website.png">
-                        <p>https://www.hopeforthewarriors.org/</p>
+                        <a href="https://www.littlefreepantry.org" target="_blank">littlefreepantry.org</a>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/gEmail.png">
-                        <p>info@hopeforthewarriors.org</p>
+                        <p>hello@littlefreepantry.org</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/gCall.png">
-                        <p>(877) 2HOPE4W</p>
+                        <p>N/A</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/clock.png">
-                        <p>Mon-Fri 8a-6p</p>
+                        <p>N/A</p>
                     </div>
                     
                     <div class="favorite">
-                        <button id="favorite"><label><input type="checkbox" id="fpic">Save to list</label></button>
+                        <button onClick="saveFromCard('card2')">Save</button>
                     </div>
                     
                 </div>
             </div>
             
-            <div class = "card"
+            <div class = "card" id = "card3"
                 data-name = "eleanor u. kennedy shelter"
                 data-type = "volunteer"
                 data-rating = "3.3"
                 data-keywords = "eleanor kennedy shelter homeless housing"
             >
                 <div class = "card-constants">
-                    <img src = "https://news.va.gov/wp-content/uploads/sites/3/2022/08/HopeForTheWarriors-scaled.jpg">
+                    <img src = "https://www.newhopehousing.org/wp-content/uploads/2019/09/nhh-web-logo.svg">
                     <div class="grid-dy">
                         <h1>Eleanor U. Kennedy Shelter</h1>
                         <span class = "rating">
@@ -215,23 +213,23 @@
                 <label class="more-info">more info<input class="check" type="checkbox"></label> 
                 
                 <div class = "card-variable">
-                    <p>Hope For The Warriors is a nonprofit that turns your hope into tangible actions that directly support U.S. military, veterans and their families.</p>
+                    <p>Help volunteering at Eleanor U. Kennedy Shelter for the homeless, It's time to rethink homelessness.</p>
                     
                     <div class = "infoRow">
                     <img src = "cardIcons/location.png">
-                    <p>8003 Forbes Pla, Springfield, VA 22151</p>
+                    <p>9155 Richmond Hwy, Fort Belvoir, VA 22060</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/website.png">
-                        <p>https://www.hopeforthewarriors.org/</p>
+                        <a href="https://www.newhopehousing.org" target="_blank">https://www.newhopehousing.org/</a>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/gEmail.png">
-                        <p>info@hopeforthewarriors.org</p>
+                        <p>weluvhomless@fakemail.com</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/gCall.png">
-                        <p>(877) 2HOPE4W</p>
+                        <p>(703) 799-0200</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/clock.png">
@@ -239,19 +237,19 @@
                     </div>
                     
                     <div class="favorite">
-                        <button id="favorite"><label><input type="checkbox" id="fpic">Save to list</label></button>
+                        <button onClick="saveFromCard('card3')">Save</button>
                     </div>
                 </div>
             </div>
             
-            <div class = "card"
+            <div class = "card" id = "card4"
                 data-name = "repair cafe"
                 data-type = "volunteer"
                 data-rating = "n/a"
                 data-keywords = "repair cafe fix electronics bikes"
             >
                 <div class = "card-constants">
-                    <img src = "https://news.va.gov/wp-content/uploads/sites/3/2022/08/HopeForTheWarriors-scaled.jpg">
+                    <img src = "https://www.repaircafe.org/wp-content/uploads/2025/01/logo-repair-cafe-1.png">
                     <div class="grid-dy">
                         <h1>Repair Cafe</h1>
                         <span class = "rating">
@@ -270,44 +268,44 @@
                 
                 <label class="more-info">more info<input class="check" type="checkbox"></label>
                 <div class = "card-variable">
-                    <p>Hope For The Warriors is a nonprofit that turns your hope into tangible actions that directly support U.S. military, veterans and their families.</p>
+                    <p>Volunteer at Repair Cafe to help reduce waste while improving DIY and technical skills by fixing household items like furniture and electronics.</p>
                     
                     <div class = "infoRow">
                     <img src = "cardIcons/location.png">
-                    <p>8003 Forbes Pla, Springfield, VA 22151</p>
+                    <p>9520 Richmond Hwy, Lorton, VA 22079</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/website.png">
-                        <p>https://www.hopeforthewarriors.org/</p>
+                        <a href="https://www.repaircafe.org/en/" target="_blank">https://www.repaircafe.org/en/</a>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/gEmail.png">
-                        <p>info@hopeforthewarriors.org</p>
+                        <p>volunteeringrepair@defreal.email</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/gCall.png">
-                        <p>(877) 2HOPE4W</p>
+                        <p>+31 20 223 25 86</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/clock.png">
-                        <p>Mon-Fri 8a-6p</p>
+                        <p>No Event Available Now</p>
                     </div>
                     
                     <div class="favorite">
-                        <button id="favorite"><label><input type="checkbox" id="fpic">Save to list</label></button>
+                        <button onClick="saveFromCard('card4')">Save</button>
                     </div>
                     
                 </div>
             </div>
             
-            <div class = "card"
+            <div class = "card" id = "card5"
                 data-name = "polar plunge"
                 data-type = "event"
                 data-rating = "n/a"
                 data-keywords = "polar plunge special olympics sports athletic"
             >
                 <div class = "card-constants">
-                    <img src = "https://news.va.gov/wp-content/uploads/sites/3/2022/08/HopeForTheWarriors-scaled.jpg">
+                    <img src = "https://dotorg.brightspotcdn.com/dims4/default/ac9b86a/2147483647/strip/true/crop/1200x400+0+320/resize/1440x480!/quality/90/?url=http%3A%2F%2Fsoi-brightspot.s3.amazonaws.com%2Fdotorg%2Fed%2F4c%2F42841c4d40679320925cabb2e7e2%2Fhero-image-classy-1200x720-bg-mosaic.png">
                     <div class="grid-dy">
                         <h1>Polar Plunge</h1>
                         <span class = "rating">
@@ -326,44 +324,44 @@
                 
                 <label class="more-info">more info<input class="check" type="checkbox"></label>
                 <div class = "card-variable">
-                    <p>Hope For The Warriors is a nonprofit that turns your hope into tangible actions that directly support U.S. military, veterans and their families.</p>
+                    <p>Polar Plunge is a high-energy fundraising event, where plungers raise awareness for special olympics. Find more information to volunteer or participate in Polar Plunge below</p>
                     
                     <div class = "infoRow">
                     <img src = "cardIcons/location.png">
-                    <p>8003 Forbes Pla, Springfield, VA 22151</p>
+                    <p>Hilton Oceanfront</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/website.png">
-                        <p>https://www.hopeforthewarriors.org/</p>
+                        <a href="https://www.specialolympicsva.org/" target="_blank">specialolympicsva.org/</a>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/gEmail.png">
-                        <p>info@hopeforthewarriors.org</p>
+                        <p>volunteer@specialolympicsva.org</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/gCall.png">
-                        <p>(877) 2HOPE4W</p>
+                        <p>800-932-4653</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/clock.png">
-                        <p>Mon-Fri 8a-6p</p>
+                        <p>February 6-7</p>
                     </div>
                     
                     <div class="favorite">
-                        <button id="favorite"><label><input type="checkbox" id="fpic">Save to list</label></button>
+                        <button onClick="saveFromCard('card5')">Save</button>
                     </div>
                     
                 </div>
             </div>
             
-            <div class = "card"
+            <div class = "card" id = "card6"
                 data-name = "virginia adoption and grooming"
                 data-type = "event"
                 data-rating = "4.9"
                 data-keywords = "virginia adoption monthly petting"
             >
                 <div class = "card-constants">
-                    <img src = "https://news.va.gov/wp-content/uploads/sites/3/2022/08/HopeForTheWarriors-scaled.jpg">
+                    <img src = "https://i.ibb.co/sYLR27k/Screenshot-2026-04-23-10-13-20-AM.png">
                     <div class="grid-dy">
                         <h1>Virginia Adoption & Grooming</h1>
                         <span class = "rating">
@@ -376,49 +374,47 @@
                         </span>
                     </div>
                     
-                    
-                    
                 </div>
                 <label class="more-info">more info<input class="check" type="checkbox"></label>
                 <div class = "card-variable">
-                    <p>Hope For The Warriors is a nonprofit that turns your hope into tangible actions that directly support U.S. military, veterans and their families.</p>
+                    <p>Virginia Adoption & Grooming is a monthly cozy non-profit event of animal lovers where you can see and adopt these cute critters.</p>
                     
                     <div class = "infoRow">
                     <img src = "cardIcons/location.png">
-                    <p>8003 Forbes Pla, Springfield, VA 22151</p>
+                    <p>1234 Sesame St., Springfield, VA 22151</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/website.png">
-                        <p>https://www.hopeforthewarriors.org/</p>
+                        <a href="https://www.hopeforthewarriors.org" target="_blank">https://www.hopeforthewarriors.org</a>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/gEmail.png">
-                        <p>info@hopeforthewarriors.org</p>
+                        <p>info@VAgroomingAdoption.org</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/gCall.png">
-                        <p>(877) 2HOPE4W</p>
+                        <p>420-123-4567</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/clock.png">
-                        <p>Mon-Fri 8a-6p</p>
+                        <p>First monday monthly 9a-5p</p>
                     </div>
                     
                     <div class="favorite">
-                        <button id="favorite"><label><input type="checkbox" id="fpic">Save to list</label></button>
+                        <button onClick="saveFromCard('card6')">Save</button>
                     </div>
                     
                 </div>
             </div>
             
-            <div class = "card"
+            <div class = "card" id = "card7"
                 data-name = "caring hearts rescue"
                 data-type = "volunteer"
                 data-rating = "5.0"
                 data-keywords = "caring heart rescue dog animal animals transportation recuring recurring"
             >
                 <div class = "card-constants">
-                    <img src = "https://news.va.gov/wp-content/uploads/sites/3/2022/08/HopeForTheWarriors-scaled.jpg">
+                    <img src = "https://static.wixstatic.com/media/7c80a4_cd8199462fd84dd598b281b754fcfe5f.png/v1/fill/w_80,h_82,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/7c80a4_cd8199462fd84dd598b281b754fcfe5f.png">
                     <div class="grid-dy">
                         <h1>Caring Hearts Rescue</h1>
                         <span class = "rating">
@@ -436,7 +432,235 @@
                 </div>
                 <label class="more-info">more info<input class="check" type="checkbox"></label>
                 <div class = "card-variable">
-                    <p>Hope For The Warriors is a nonprofit that turns your hope into tangible actions that directly support U.S. military, veterans and their families.</p>
+                    <p>Caring Hearts Rescue helps rescue small dogs and help them find homes and families. Volunteer to help fosture your own little dogs.</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>6412 Brandon Avenue #182, Springfield, VA 22150</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www.caringheartsrescue.org" target="_blank">caringheartsrescue.org</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>caringheartsrescue@aol.com</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(703) 574-5874</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>No Information Provided</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card7')">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card" id = "card8"
+                data-name = "invasive management area program"
+                data-type = "volunteer"
+                data-rating = "n/a"
+                data-keywords = "fairfax management program invasive species cleanup reocurring"
+            >
+                <div class = "card-constants">
+                    <img src = "https://www.fairfaxcounty.gov/parks/sites/parks/files/Assets/images/naturalcultural/ima/IMA-Hero-Image.jpg">
+                    
+                    <div class="grid-dy">
+                        <h1> Invasive Management Area Program</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>N/A</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>The Invasive Management Area Program stops invasive species. Every once in a while we will help preserve and restore natural habitats and ecosystems. Volunteer now</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>12055 Government Center Parkway, Fairfax, VA 22035</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www.fairfaxcounty.gov/parks/invasive-management-area" target="_blank">https://www.fairfaxcounty.gov/parks/invasive-management-area</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>parkmail@fairfaxcounty.gov</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(703) 324-4414</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>~3 hours</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card8')">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card" id = "card9"
+                data-name = "walk ms"
+                data-type = "volunteer"
+                data-rating = "n/a"
+                data-keywords = "walk ms multiple-scelerosis fundraising accessibility"
+            >
+                <div class = "card-constants">
+                    <img src = "https://donordrivecontent.com/mssociety/images/$cms$/101/1DF41A97-B673-6208-4612D508AA8781C5.png">
+                    
+                    <div class="grid-dy">
+                        <h1>Walk MS</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>N/A</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>A flagship fundraising event/volunteer for the National Multiple Society, to raise money for MS research</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>600 East Laburnum Avenue, Richmond, Virginia 23222</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www.walkMS.org" target="_blank">walkMS.org</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>volunteerMS@nmss.org</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>855-372-1331</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>May 2, 2026</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card9')">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card" id = "card10"
+                data-name = "britepaths"
+                data-type = "volunteer"
+                data-rating = "4.8"
+                data-keywords = "britepath britepaths financial financial-support education food"
+            >
+                <div class = "card-constants">
+                    <img src = "https://britepaths.org/wp-content/uploads/2021/04/Britepaths-300dpi-RGB-transparent-bg-grletters.png">
+                    
+                    <div class="grid-dy">
+                        <h1>Britepaths</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>4.8</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Britepaths, formerly known as Our Daily bread, is here to help struggling Virginia families recover from financial crisis by providing food and financial support.</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>3959 Pender Drive, Suite 200, Fairfax, VA 22030</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www.britepaths.org" target="_blank">britepaths.org</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@britepaths.org</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(703) 273-8829</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>N/A</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card10')">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card" id = "card11"
+                data-name = "beer olympics"
+                data-type = "event"
+                data-rating = "n/a"
+                data-keywords = "beer olympic once one-time social hangout"
+            >
+                <div class = "card-constants">
+                    <img src = "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_432,q_80,w_768/v1/crm/fairfax/4_341435BC-F58C-02E6-A64CAD7CB03F1BAF_3416b672-c729-dc3e-25dce8988b0af776.png">
+                    
+                    <div class="grid-dy">
+                        <h1>Beer Olympics</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>N/A</p>
+                            
+                            <span class="category">
+                                <p>Event</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Have fun at this one time age 21+ event to hang out with the community and meet up with people</p>
                     
                     <div class = "infoRow">
                     <img src = "cardIcons/location.png">
@@ -444,28 +668,994 @@
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/website.png">
-                        <p>https://www.hopeforthewarriors.org/</p>
+                        <p>N/A</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/gEmail.png">
-                        <p>info@hopeforthewarriors.org</p>
+                        <p>N/A</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/gCall.png">
-                        <p>(877) 2HOPE4W</p>
+                        <p>N/A</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/clock.png">
-                        <p>Mon-Fri 8a-6p</p>
+                        <p>April 20, 2026</p>
                     </div>
                     
                     <div class="favorite">
-                        <button id="favorite"><label><input type="checkbox" id="fpic">Save to list</label></button>
+                        <button onClick="saveFromCard('card11')">Save</button>
                     </div>
                     
                 </div>
             </div>
             
+            <div class = "card" id = "card12"
+                data-name = "rebuilding together"
+                data-type = "volunteer"
+                data-rating = "5.0"
+                data-keywords = "rebuilding together repair repairs home help volunteer"
+            >
+                <div class = "card-constants">
+                    <img src = "https://rebuildingtogether-aff.org/wp-content/uploads/hp-banner2.jpg">
+                    
+                    <div class="grid-dy">
+                        <h1>Rebuilding Together</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>5.0</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Rebuilding Together is a national nonprofit organization that provides free home repairs and modifications on essential areas for low-incom homeowners, veterans, and people with disabilities.</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>10723 Main Street, Suite 135, Fairfax, VA 22030</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www.rebuildingtogether-aff.org" target="_blank">rebuildingtogether-aff.org</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@rebuildingtogether-aff.org</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(703) 528-1999</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>N/A</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card12')">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card" id = "card13"
+                data-name = "girls on the run of nova"
+                data-type = "event"
+                data-rating = "5.0"
+                data-keywords = "girls fitness confidence run nova "
+            >
+                <div class = "card-constants">
+                    <img src = "https://www.gotrnova.org/images/home/girlssay.jpg?mode=crop&scale=both">
+                    
+                    <div class="grid-dy">
+                        <h1>Girls on the Run of Nova</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>5.0</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Girls on the Run of Nova is a reocurring event that helps young girls help build confidence by running a 5K.</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>7800 Cellar Door Dr, Bristow, VA 20136</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www.gotrnova.org" target="_blank">gotrnova.org</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@gotrnova.org</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(703) 273-3153</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Saturday, May 16, 2026</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card13')">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card" id = "card14"
+                data-name = "peppa pig - my first concert"
+                data-type = "event"
+                data-rating = "n/a"
+                data-keywords = "peppa pig concert first one-time children"
+            >
+                <div class = "card-constants">
+                    <img src = "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_432,q_80,w_768/v1/crm/fairfax/Peppa-Pig_34C5A0FD-AC15-F2E0-EB0A53694B5440F6_34d41d82-92a9-d336-de4dddecd794ba46.jpg">
+                    
+                    <div class="grid-dy">
+                        <h1>Peppa Pig - my first concert</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>N/A</p>
+                            
+                            <span class="category">
+                                <p>Event</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>My first concert, it's a kids event.</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>4373 Mason Pond Dr, Fairfax, VA 22030</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <p>N/A</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>N/A</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(420) 679 6767</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>March 10, 2026</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card14)">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card" id = "card15"
+                data-name = "the magic of rob lake"
+                data-type = "event"
+                data-rating = "n/a"
+                data-keywords = "magic one-time all-ages everyone of"
+            >
+                <div class = "card-constants">
+                    <img src = "https://25livepub.collegenet.com/i/DgDVtPdnSmHUmiiFlRQiSJqP.jpg">
+                    
+                    <div class="grid-dy">
+                        <h1>The Magic of Rob Lake</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>N/A</p>
+                            
+                            <span class="category">
+                                <p>Event</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>By the "World Greatest Illusionist", the event is going to be a large magic show.</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>4373 Mason Pond Dr, Fairfax, VA 22030</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www.roblake.com" target="_blank">roblake.com</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>N/A</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>877-948-LAKE (5253)</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>April 19, 2026</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card15')">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card" id = "card16"
+                data-name = "the winds beyond chang an"
+                data-type = "event"
+                data-rating = "n/a"
+                data-keywords = "event winds beyond concert one-time"
+            >
+                <div class = "card-constants">
+                    <img src = "https://www.capitalonehall.com/assets/img/GWCD-WindsBeyondChangan-1440x780-454b2db0e1.jpg">
+                    
+                    <div class="grid-dy">
+                        <h1>The Winds Beyond Chang'an</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>N/A</p>
+                            
+                            <span class="category">
+                                <p>Event</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>A chinese drama set in the golden age of the tang dynasty</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>13739 Water Oak Ct, Centreville, VA 20121</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www.gwcd.org" target="_blank">gwcd.org</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@gwcd.org</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>N/A</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>March 15, 2026</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card16')">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card" id = "card17"
+                data-name = "hope for the warriors"
+                data-type = "volunteer"
+                data-rating = "5.0"
+                data-keywords = "vetefef efjkfj"
+            >
+                <div class = "card-constants">
+                    <img src = "https://n">
+                    
+                    <div class="grid-dy">
+                        <h1>Hopeeffff</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>5.0</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Hopeefjkwj</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>8003 For</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www." target="_blank">https:</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@hopefor</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(873383</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Mon-Fr</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card17')">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card" id = "card18"
+                data-name = "hope for the warriors"
+                data-type = "volunteer"
+                data-rating = "5.0"
+                data-keywords = "vetefef efjkfj"
+            >
+                <div class = "card-constants">
+                    <img src = "https://n">
+                    
+                    <div class="grid-dy">
+                        <h1>Hopeeffff</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>5.0</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Hopeefjkwj</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>8003 For</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www." target="_blank">https:</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@hopefor</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(873383</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Mon-Fr</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card18')">Save</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class = "card" id = "card19"
+                data-name = "hope for the warriors"
+                data-type = "volunteer"
+                data-rating = "5.0"
+                data-keywords = "vetefef efjkfj"
+            >
+                <div class = "card-constants">
+                    <img src = "https://n">
+                    
+                    <div class="grid-dy">
+                        <h1>Hopeeffff</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>5.0</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Hopeefjkwj</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>8003 For</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www." target="_blank">https:</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@hopefor</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(873383</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Mon-Fr</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card19')">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card" id = "card20"
+                data-name = "hope for the warriors"
+                data-type = "volunteer"
+                data-rating = "5.0"
+                data-keywords = "vetefef efjkfj"
+            >
+                <div class = "card-constants">
+                    <img src = "https://n">
+                    
+                    <div class="grid-dy">
+                        <h1>Hopeeffff</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>5.0</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Hopeefjkwj</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>8003 For</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www." target="_blank">https:</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@hopefor</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(873383</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Mon-Fr</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card20')">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card" id = "card21"
+                data-name = "hope for the warriors"
+                data-type = "volunteer"
+                data-rating = "5.0"
+                data-keywords = "vetefef efjkfj"
+            >
+                <div class = "card-constants">
+                    <img src = "https://n">
+                    
+                    <div class="grid-dy">
+                        <h1>Hopeeffff</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>5.0</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Hopeefjkwj</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>8003 For</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www." target="_blank">https:</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@hopefor</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(873383</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Mon-Fr</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card21')">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card" id = "card22"
+                data-name = "hope for the warriors"
+                data-type = "volunteer"
+                data-rating = "5.0"
+                data-keywords = "vetefef efjkfj"
+            >
+                <div class = "card-constants">
+                    <img src = "https://n">
+                    
+                    <div class="grid-dy">
+                        <h1>Hopeeffff</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>5.0</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Hopeefjkwj</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>8003 For</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www." target="_blank">https:</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@hopefor</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(873383</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Mon-Fr</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card22')">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card" id = "card23"
+                data-name = "hope for the warriors"
+                data-type = "volunteer"
+                data-rating = "5.0"
+                data-keywords = "vetefef efjkfj"
+            >
+                <div class = "card-constants">
+                    <img src = "https://n">
+                    
+                    <div class="grid-dy">
+                        <h1>Hopeeffff</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>5.0</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Hopeefjkwj</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>8003 For</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www." target="_blank">https:</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@hopefor</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(873383</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Mon-Fr</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card23')">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card" id = "card24"
+                data-name = "hope for the warriors"
+                data-type = "volunteer"
+                data-rating = "5.0"
+                data-keywords = "vetefef efjkfj"
+            >
+                <div class = "card-constants">
+                    <img src = "https://n">
+                    
+                    <div class="grid-dy">
+                        <h1>Hopeeffff</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>5.0</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Hopeefjkwj</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>8003 For</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www." target="_blank">https:</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@hopefor</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(873383</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Mon-Fr</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card24')">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card" id = "card25"
+                data-name = "hope for the warriors"
+                data-type = "volunteer"
+                data-rating = "5.0"
+                data-keywords = "vetefef efjkfj"
+            >
+                <div class = "card-constants">
+                    <img src = "https://n">
+                    
+                    <div class="grid-dy">
+                        <h1>Hopeeffff</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>5.0</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Hopeefjkwj</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>8003 For</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www." target="_blank">https:</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@hopefor</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(873383</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Mon-Fr</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card25')">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card" id = "card26"
+                data-name = "hope for the warriors"
+                data-type = "volunteer"
+                data-rating = "5.0"
+                data-keywords = "vetefef efjkfj"
+            >
+                <div class = "card-constants">
+                    <img src = "https://n">
+                    
+                    <div class="grid-dy">
+                        <h1>Hopeeffff</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>5.0</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Hopeefjkwj</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>8003 For</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www." target="_blank">https:</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@hopefor</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(873383</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Mon-Fr</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card26')">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class = "card" id = "card27"
+                data-name = "hope for the warriors"
+                data-type = "volunteer"
+                data-rating = "5.0"
+                data-keywords = "vetefef efjkfj"
+            >
+                <div class = "card-constants">
+                    <img src = "https://n">
+                    
+                    <div class="grid-dy">
+                        <h1>Hopeeffff</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>5.0</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Hopeefjkwj</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>8003 For</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www." target="_blank">https:</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@hopefor</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(873383</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Mon-Fr</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card27')">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class = "card" id = "card28"
+                data-name = "hope for the warriors"
+                data-type = "volunteer"
+                data-rating = "5.0"
+                data-keywords = "vetefef efjkfj"
+            >
+                <div class = "card-constants">
+                    <img src = "https://n">
+                    
+                    <div class="grid-dy">
+                        <h1>Hopeeffff</h1>
+                        <span class = "rating">
+                            <img src = "cardIcons/star.png">
+                            <p>5.0</p>
+                            
+                            <span class="category">
+                                <p>Volunteer</p>
+                            </span>
+                        </span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <label class="more-info">more info<input class="check" type="checkbox"></label>
+                <div class = "card-variable">
+                    <p>Hopeefjkwj</p>
+                    
+                    <div class = "infoRow">
+                    <img src = "cardIcons/location.png">
+                    <p>8003 For</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/website.png">
+                        <a href="https://www." target="_blank">https:</a>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gEmail.png">
+                        <p>info@hopefor</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/gCall.png">
+                        <p>(873383</p>
+                    </div>
+                    <div class = "infoRow">
+                        <img src = "cardIcons/clock.png">
+                        <p>Mon-Fr</p>
+                    </div>
+                    
+                    <div class="favorite">
+                        <button onClick="saveFromCard('card28')">Save</button>
+                    </div>
+                    
+                </div>
+            </div>
             
         </div>
         
@@ -513,4 +1703,8 @@
             </div>
         </footer>
     </body>
-</html>
+</html> 
+
+
+
+
