@@ -32,8 +32,23 @@ body{
     66.4% {background: blue}
     83% {background: purple}
     100%{background: red}
-}/*idk i just do*/
+}/*idk i just wanted to test if it worked*/
 
+@keyframes buzz{
+    0% {transform: rotate(0deg)}
+    10% {transform: rotate(-2deg)}
+    20% {transform: rotate(5deg)}
+    40% {transform: rotate(-7deg)}
+    60% {transform: rotate(8deg)}
+    80% {transform: rotate(-2deg)}
+    100% {transform: rotate(0deg)}
+}
+@keyframes ding{
+    20% {transform: rotate(0deg)}
+    40% {transform: rotate(8deg)}
+    60% {transform: rotate(-4deg)}
+    80% {transform: rotate(0deg)}
+}
 
 html::-webkit-scrollbar{
     width: clamp(4px, .4dvw, 12px);
@@ -250,11 +265,13 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
         user-select: text;
     }
     .links{
+        display: flex;
         margin-left: auto;
-        line-height: 2.6;
+        align-items: center;
         cursor: default;
     }
     .links a{
+        display: block;
         height: clamp(1.3rem, 1.7dvw, 1.7rem);
         margin-right: 14px;
         cursor: pointer;
@@ -266,6 +283,15 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
     }
     .links a:last-child{
         margin: 0;
+    }
+    .links a:hover{
+        animation: ding .8s 1;
+    }
+    #onsite:hover{
+        animation: buzz .8s linear infinite;
+    }
+    #onsite{
+        color: var(--accent);
     }
     
     .profile{
