@@ -214,7 +214,7 @@
         display: flex;
         background: var(--cardbg);
         width: 110px;
-        padding: 5px 8px 5px 8px;
+        padding: 5px 10px 5px 8px;
         border-radius: 10px;
         align-items: center;
         cursor: pointer;
