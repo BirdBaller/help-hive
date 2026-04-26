@@ -213,7 +213,7 @@
     .functions label{
         display: flex;
         background: var(--cardbg);
-        width: 100px;
+        width: 110px;
         padding: 5px 8px 5px 8px;
         border-radius: 10px;
         align-items: center;
@@ -225,8 +225,8 @@
     }
     .functions img{
         float: left;
-        width: 31px;
-        height: 31px;
+        width: 30px;
+        height: 30px;
         margin-right: 8px;
     }
     
