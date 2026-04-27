@@ -1,6 +1,9 @@
 @import "style.css";
 
 
+.gap{
+    height: 30dvh;
+}
 body:not(:has(.card)) .gap{
     height: 70dvh;
 }
@@ -160,7 +163,4 @@ body:not(:has(.card)) .gap{
         height: clamp(30px, 7dvw, 40px);
     }
 }
-
-
-
 
