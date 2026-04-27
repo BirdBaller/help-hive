@@ -1,3 +1,9 @@
+const switched = document.getElementById("LightSwitch");
+switched.checked = localStorage.switched === "1";
+switched.onchange = () => localStorage.switched = switched.checked ? "1" : "0";
+
+
+
 const resources = [
     
     {
@@ -243,9 +249,6 @@ function filterResources() {
 renderSaved();
 
 
-const switched = document.getElementById("LightSwitch");
-switched.checked = localStorage.switched === "1";
-switched.onchange = () => localStorage.switched = switched.checked ? "1" : "0";
 
 // Buttons listeners Resources... still not done
 /*
