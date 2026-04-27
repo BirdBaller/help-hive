@@ -284,7 +284,6 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
         user-select: text;
     }
     
-    
     .faceplate{
         width: 24px;
         height: 24px;
@@ -364,7 +363,7 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
         width: 50px;
         align-items: center;
         flex-direction: column;
-        margin: 0 15px 0 5%;
+        margin: 0 20px 0 clamp(5px, 5%, 20px);
         text-decoration: none;
     }
     .profile img{
