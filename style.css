@@ -8,11 +8,13 @@
     --laccent: #ffe768;
     --txt: #fff;
     --pure #000;
-    --topbar-height:16.4vw;
+    --img: #ddd;
     
+    --topbar-height:16.4vw;
     /*temp stuff or idk i just do*/
     --upup: -20px;
 }
+
 
 body{
     background-color: var(--bg);
@@ -84,7 +86,8 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
     background: var(--cardbg);
 }
 
-#search, #filter, .check, .foot hr{
+
+#search, #filter, .check, .foot hr, #lightSwitch{
     display: none;
 }/* usually just inputs, but anything that yhou never want to display*/
 
@@ -168,8 +171,8 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
     display: none;
 }
 
-@media(max-width: 620px){
-    .topbar a{
+@media(max-width: 690px){
+    .topbar a, .faceplate{
         display: none;
     }
     .topbar{
@@ -177,7 +180,7 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
         display: flex;
         background-color: var(--headfoot);
         width:100%;
-        height: clamp(1px, var(--topbar-height), 80px);
+        height: clamp(1px, var(--topbar-height), 65px);
         left: 0;
         top: 0;
         border-radius: 0vw 0vw 2vw 2vw;
@@ -193,8 +196,8 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
         -moz-transition-duration:0.5s;
         -o-transition-duration:0.5s;
     }
-    .topbar img {
-        width: clamp(1px, 17%, 85px);
+    .topbar img{
+        width: clamp(1px, 15%, 72px);
         margin-left: 12%;
     }
     .topbar h1{
@@ -224,6 +227,7 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
         display: flex;
         background-color: var(--headfoot);
         width:100%;
+        transform: translateY(6dvw);
         left: 0;
         bottom: 0;
         padding-bottom:6dvw;
@@ -232,16 +236,30 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
         z-index: 100;
     }
     .navbar img{
-        width: clamp(45px, 12.3dvw, 60px); 
-        height: clamp(45px, 12.3dvw, 60px);
+        width: clamp(45px, 12dvw, 50px); 
+        height: clamp(45px, 12dvw, 50px);
     }
     
     .contactHold{
-        margin-bottom: 12.5dvw;
+        margin-bottom: 0;
     }
 }
     
-@media(min-width: 620px){
+@media(min-width: 690px){
+    body:has(#lightSwitch:checked){
+        --headfoot: #fff;
+        --bg: #ededec;
+        --cardbg: #fafafa;
+        --accent: #f5bb00;
+        --txt: #000;
+        --pure: #fff;
+        transition: .3s;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -o-transition: .3s;
+    }
+    
+    
     .navbar{
         display: none;
     }
@@ -265,6 +283,50 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
         cursor: default;
         user-select: text;
     }
+    
+    
+    .faceplate{
+        width: 20px;
+        height: 20px;
+        margin-right: clamp(10px, .67dvw, 30px);
+        border: 2px solid var(--txt);
+        border-radius: 10000px;
+        cursor: pointer;
+        transition: .3s;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -o-transition: .3s;
+    }
+    .faceplate:hover, .faceplate:focus{
+        width: 45px;
+    }
+    .faceplate::before{
+        content: ""; /*using url for image doesnt work well :d*/
+        position: absolute;
+        background: var(--txt);
+        
+        width: 20px;
+        height: 20px;
+        border-radius: 1000px;
+        transition: .3s;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -o-transition: .3s;
+    }
+    .faceplate:hover::before, .faceplate:focus::before{
+        transform: translateX(125%);
+        -webkit-transform: translateX(125%);
+        -moz-transform: translateX(125%);
+        -o-transform: translateX(125%);
+    }
+    body:has(#lightSwitch:checked) .faceplate::before{
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+    
+    
     .links{
         display: flex;
         margin-left: auto;
@@ -300,7 +362,7 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
         width: 50px;
         align-items: center;
         flex-direction: column;
-        margin: 0 8px 0 5%;
+        margin: 0 15px 0 5%;
         text-decoration: none;
     }
     .profile img{
