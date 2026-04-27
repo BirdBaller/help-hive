@@ -14,7 +14,10 @@
             <img src = "logo.png">
             <h1>Help Hive</h1>
             
+            <input id="lightSwitch" type="checkbox">
             <div class="links">
+                <label class="faceplate" for="lightSwitch" tabindex="0"></label>
+                
                 <a href="index.html" id="onsite">home</a>
                 <a href="resources.html">resources</a>
                 <a href="form.html">form</a>
@@ -22,7 +25,7 @@
             </div>
             <a href="profile.html" class="profile">
                 <img src="navIcons/gProfile.png">
-                <p>profile</p>
+                <p>Reference</p>
             </a>
         </header>
         
@@ -85,7 +88,7 @@
                     </div>
                     
                     <div class="favorite">
-                        <button onclick="saveFromCard('card1')">Save to list</button>
+                        <button onclick="saveFromCard('card1', event)">Save to list</button>
                     </div>
                     
                 </div>
@@ -133,17 +136,19 @@
                     </div>
                     
                     <div class="favorite">
-                        <button onclick="saveFromCard('card2')">Save to list</button>
+                        <button onclick="saveFromCard('card2', event)">Save to list</button>
                     </div>
                     
                 </div>
             </div>
             
-            <div class = "card" id="card3">
+            
+            <div class = "card" id = "card3">
                 <div class = "card-constants">
-                    <img src = "https://static.wixstatic.com/media/7c80a4_cd8199462fd84dd598b281b754fcfe5f.png/v1/fill/w_80,h_82,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/7c80a4_cd8199462fd84dd598b281b754fcfe5f.png">
+                    <img src = "https://www.gotrnova.org/images/home/girlssay.jpg?mode=crop&scale=both">
+                    
                     <div class="grid-dy">
-                        <h1>Caring Hearts Rescue</h1>
+                        <h1>Girls on the Run of Nova</h1>
                         <span class = "rating">
                             <img src = "cardIcons/star.png">
                             <p>5.0</p>
@@ -153,38 +158,41 @@
                             </span>
                         </span>
                     </div>
+                    
                 </div>
+                
                 <label class="more-info">more info<input class="check" type="checkbox"></label>
                 <div class = "card-variable">
-                    <p>Caring Hearts Rescue helps rescue small dogs and help them find homes and families. Volunteer to help fosture your own little dogs.</p>
+                    <p>Girls on the Run of Nova is a reocurring event that helps young girls help build confidence by running a 5K.</p>
                     
                     <div class = "infoRow">
                     <img src = "cardIcons/location.png">
-                    <p>6412 Brandon Avenue #182, Springfield, VA 22150</p>
+                    <p>7800 Cellar Door Dr, Bristow, VA 20136</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/website.png">
-                        <p>caringheartsrescue.org</p>
+                        <a href="https://www.gotrnova.org" target="_blank">gotrnova.org</a>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/gEmail.png">
-                        <p>caringheartsrescue@aol.com</p>
+                        <p>info@gotrnova.org</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/gCall.png">
-                        <p>(703) 574-5874</p>
+                        <p>(703) 273-3153</p>
                     </div>
                     <div class = "infoRow">
                         <img src = "cardIcons/clock.png">
-                        <p>No Information Provided</p>
+                        <p>Saturday, May 16, 2026</p>
                     </div>
                     
                     <div class="favorite">
-                        <button onclick="saveFromCard('card3')">Save to list</button>
+                        <button onClick="saveFromCard('card3')">Save</button>
                     </div>
                     
                 </div>
             </div>
+            
             
             
             <span class = "rdots">
@@ -205,7 +213,7 @@
         
         
         <nav class = "navbar">
-            <a href = "index.html"><img src = "navIcons/yHome.png"></a>
+            <a href = "index.html" id="onsite"><img src = "navIcons/yHome.png"></a>
             <a href = "resources.html"><img src = "navIcons/gCompass.png"></a>
             <a href = "form.html"><img src = "navIcons/gPlus.png"></a>
             <a href = "saved.html"><img src = "navIcons/gSaved.png"></a>
@@ -247,8 +255,4 @@
         
     </body>
 </html>
-
-
-
-
 
