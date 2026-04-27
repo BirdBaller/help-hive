@@ -2,7 +2,6 @@
 
 
 
-
 .notes{
     display: flex;
     width: 90%;
@@ -98,7 +97,7 @@ input:focus{
     width: 90%;
     margin: 0 5% 5px 5%;
     float: right;
-    grid-template-columns: 40% 30% 30%;
+    grid-template-columns: 60% 40%;
     
 }
 .category label{
@@ -111,20 +110,7 @@ input:focus{
     font-family:ADLaM-Display;
 }
 
-.more-info{
-    display: flex;
-    background: var(--accent);
-    width: 80%;
-    margin: auto;
-    padding: 1px 2px 1px 2px;
-    border-radius: 20px;
-    justify-content: center;
-    
-    color: var(--pure);
-    font-size: 1.4rem;
-    line-height: 1.6;
-    text-align: center;
-}
+
 
 .desc{
     color: var(--txt);
@@ -155,7 +141,7 @@ input:focus{
     border-radius: 50%;
 }
 .infoRow label{
-    color: var(--accent);
+    color: var(--txt);
     font-size: .95rem;
 }
 .infoRow input{
@@ -191,7 +177,26 @@ input:focus{
     cursor: pointer;
 }
 
+.confirmation{
+    display: flex;
+    font-family:ADLaM-Display;
+    font-size: 1.3rem;
+    color: var(--accent);
+    justify-content: center;
+}
+.confirmation p{
+    opacity: 0;
+    background: var(--headfoot);
+    padding:  5px 12px 5px 12px;
+    border-radius: 10px;
+    cursor: default;
+    transition: .2s;
+}
 
+body:has(button:focus) .confirmation p{
+    opacity: 1;
+    animation: ding 1s 1;
+}
 
 @media(min-width: 728px){
     .fcard{
@@ -219,4 +224,5 @@ input:focus{
     .gap{
         padding-bottom: 20dvh;
     }
+    
 }
