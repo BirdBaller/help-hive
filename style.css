@@ -286,8 +286,8 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
     
     
     .faceplate{
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
         margin-right: clamp(10px, .67dvw, 30px);
         border: 2px solid var(--txt);
         border-radius: 10000px;
@@ -298,16 +298,16 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
         -o-transition: .3s;
     }
     .faceplate:hover, .faceplate:focus{
-        width: 45px;
+        width: 50px;
     }
     .faceplate::before{
         content: ""; /*using url for image doesnt work well :d*/
         position: absolute;
         background: var(--txt) url("moon.png") center / contain no-repeat;
         
-        width: 16px;
-        height: 16px;
-        padding: 2px;
+        width: 16.35px;
+        height: 16.35px;
+        padding: 4px;
         border-radius: 1000px;
         transition: .3s;
         -webkit-transition: .3s;
@@ -315,10 +315,10 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
         -o-transition: .3s;
     }
     .faceplate:hover::before, .faceplate:focus::before{
-        transform: translateX(125%);
-        -webkit-transform: translateX(125%);
-        -moz-transform: translateX(125%);
-        -o-transform: translateX(125%);
+        transform: translateX(107%);
+        -webkit-transform: translateX(107%);
+        -moz-transform: translateX(107%);
+        -o-transform: translateX(107%);
     }
     body:has(#lightSwitch:checked) .faceplate::before{
         background-image: url("sun.png");
