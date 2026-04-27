@@ -76,11 +76,12 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
     -moz-user-select: none;
     -o-user-select: none;
 }
+
+*::selection{
+    background: var(--headfoot);
+}
 .topbar h1::selection, .contactRow p::selection{
     background: var(--cardbg);
-}
-.infoRow::selection{
-    background: var(--headfoot);
 }
 
 #search, #filter, .check, .foot hr{
