@@ -1,9 +1,31 @@
 const resources = [
-    { id: 1, title: "Hope for the warriors", category: "Volunteer", desc: "Hope For The Warriors is a nonprofit that turns your hope into tangible actions that directly support U.S. military, veterans and their families."},
-    { id: 2, title: "CSS Styling", category: "Design", desc: "Make your pages look beautiful." },
-    { id: 3, title: "JS Logic", category: "Programming", desc: "Add interactivity to your site." },
-    { id: 4, title: "Shrevan", category: "captain", desc: "Web design black short yellow jacket leader"},
-    { id: 5, title: "minhaz", category: "The goat", desc: "awesome smart nonchalant king nice best kid ever popular kind the goat" }
+    
+    {
+    id: "card1",
+    title: "Hope for the Warriors",
+    category: "Volunteer",
+    rating: "5.0",
+    desc: "Supports veterans and their families.",
+    img: "https://news.va.gov/wp-content/uploads/sites/3/2022/08/HopeForTheWarriors-scaled.jpg",
+    location: "8003 Forbes Pl, Springfield, VA",
+    website: "https://www.hopeforthewarriors.org/",
+    email: "info@hopeforthewarriors.org",
+    phone: "(877) 2HOPE4W",
+    hours: "Mon-Fri 8a-6p"
+  },
+  {
+    id: "card2",
+    title: "Animal Adoption Event",
+    category: "Event",
+    rating: "4.9",
+    desc: "Monthly adoption event for animals.",
+    img: "https://i.ibb.co/sYLR27k/Screenshot.png",
+    location: "1234 Sesame St, VA",
+    website: "https://example.com",
+    email: "info@example.com",
+    phone: "420-123-4567",
+    hours: "First Monday monthly"
+  }
 ]
 {
 const top = document.querySelector(".topbar");
