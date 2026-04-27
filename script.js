@@ -1,4 +1,4 @@
-const switched = document.getElementById("LightSwitch");
+const switched = document.getElementById("lightSwitch");
 switched.checked = localStorage.switched === "1";
 switched.onchange = () => localStorage.switched = switched.checked ? "1" : "0";
 
