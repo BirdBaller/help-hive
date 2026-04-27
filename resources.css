@@ -6,7 +6,7 @@
     background: var(--cardbg);
     width: 170px;
     height: 25px;
-    margin: 10px auto 10px auto;
+    margin: 30px auto 30px auto;
     border-radius: 10px;
     text-decoration: none;
     
@@ -15,6 +15,16 @@
     font-size: 1.05rem;
     line-height: 1.6;
     text-align: center;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+}
+.nav-link:hover{
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
 }
 
 .results{
@@ -36,24 +46,16 @@
     border-radius: clamp(25px, 5dvw, 40px);
 
     font-family:ADLaM-Display;
-    transition-property: border-radius;
-    transition-duration: .3s;
-    transition-delay: .4s;
-    -webkit-transition-property: border-radius;
-    -webkit-transition-duration: .3s;
-    -webkit-transition-delay: .4s;
-    -moz-transition-property: border-radius;
-    -moz-transition-duration: .3s;
-    -moz-transition-delay: .4s;
-    -o-transition-property: border-radius;
-    -o-transition-duration: .3s;
-    -o-transition-delay: .4s;
+    transition: border-radius .3s .4s;
+    -webkit-transition: border-radius .3s .4s;;
+    -moz-transition: border-radius .3s .4s;;
+    -o-transition: border-radius .3s .4s;;
 }
 .card-constants{
     width: clamp(240px, 62dvw, 280px); 
 }
 .card-constants > img{
-    background: var(--txt);
+    background: var(--img);
     width: 90%; 
     aspect-ratio: 16/9;
     margin: 4.5% 0 0 5%;
@@ -94,7 +96,7 @@
     color: var(--pure);
     width: 100%;
     height: 100%;
-    padding: 0 1px 0 4px;
+    padding: 0 1px 0 6px;
     border-radius: 10px;
     margin: 0px;
 
@@ -117,7 +119,7 @@
     cursor: pointer;
 }
 
-.card:has(.check:checked){
+.card:has(.check:checked){ /*probably could've used something like focus-within, but its whatever*/
     border-radius: clamp(25px, 5dvw, 40px) clamp(25px, 5dvw, 40px) 0 0;
     transition-duration: 0s;
     transition-delay: 0s;
@@ -191,10 +193,13 @@
 @media(min-width: 620px){
     .ibecontainin{
         position: fixed;
-        transform: translateY(20dvh);
         top: 0;
         left: 0;
         z-index: 41;
+        transform: translateY(20dvh);
+        -webkit-transform: translateY(20dvh);
+        -moz-transform: translateY(20dvh);
+        -o-transform: translateY(20dvh);
     }
     .functions{
         display: flex;
@@ -205,10 +210,16 @@
         flex-direction: column-reverse;
         gap: 10px;
         transition: border-radius .2s .1s;
+        -webkit-transition: border-radius .2s .1s;
+        -moz-transition: border-radius .2s .1s;
+        -o-transition: border-radius .2s .1s;
     }
     .ibecontainin:has(#search:checked) .functions, .ibecontainin:has(#filter:checked) .functions{
         border-radius: 0px 10px 0px 0px;
         transition: .2s .3s;
+        -webkit-transition: .2s .3s;
+        -moz-transition: .2s .3s;
+        -o-transition: .2s .3s;
     }
     .functions label{
         display: flex;
@@ -223,6 +234,10 @@
         color: var(--txt);
         font-size: 1.2rem;
     }
+    body:has(#lightSwitch:checked) .functions label{
+        border: 1px solid var(--bg);
+    }
+    
     .functions img{
         float: left;
         width: 30px;
@@ -242,6 +257,9 @@
         color: var(--pure);
         font-size: 1rem;
         transition: width .4s, height .2s .4s, visibility 0s .58s;
+        -webkit-transition: width .4s, height .2s .4s, visibility 0s .58s;
+        -moz-transition: width .4s, height .2s .4s, visibility 0s .58s;
+        -o-transition: width .4s, height .2s .4s, visibility 0s .58s;
     }
     #search:checked ~ #searchBar{
         visibility: visible;
@@ -250,14 +268,26 @@
         padding-left: 4px;
         height: 1.3rem;
         transition: border-radius .2s .3s, visibility 0s, height .2s, width .4s .2s;
+        -webkit-transition: border-radius .2s .3s, visibility 0s, height .2s, width .4s .2s;
+        -moz-transition: border-radius .2s .3s, visibility 0s, height .2s, width .4s .2s;
+        -o-transition: border-radius .2s .3s, visibility 0s, height .2s, width .4s .2s;
     }
     
     .ibecontainin:not(:has(#search:checked)) .filters{
         transform: translateY(-20px);
+        -webkit-transform: translateY(-20px);
+        -moz-transform: translateY(-20px);
+        -o-transform: translateY(-20px);
         transition: transform .1s .5s, visibility 0s .5s, width .35s .3s, max-height .3s;
+        -webkit-transition: transform .1s .5s, visibility 0s .5s, width .35s .3s, max-height .3s;
+        -moz-transition: transform .1s .5s, visibility 0s .5s, width .35s .3s, max-height .3s;
+        -o-transition: transform .1s .5s, visibility 0s .5s, width .35s .3s, max-height .3s;
     }
     .ibecontainin:not(:has(#search:checked)) #filter:checked ~ .filters{
         transition: transform .1s .5s, visibility 0s, width .35s, max-height .3s .35s;
+        -webkit-transition: transform .1s .5s, visibility 0s, width .35s, max-height .3s .35s;
+        -moz-transition: transform .1s .5s, visibility 0s, width .35s, max-height .3s .35s;
+        -o-transition: transform .1s .5s, visibility 0s, width .35s, max-height .3s .35s;
     }
     .filters{
         visibility: hidden;
@@ -272,12 +302,18 @@
         color: var(--txt);
         font-size: 1.05rem;
         transition: visibility 0s .5s, width .35s .3s, max-height .3s;
+        -webkit-transition: visibility 0s .5s, width .35s .3s, max-height .3s;
+        -moz-transition: visibility 0s .5s, width .35s .3s, max-height .3s;
+        -o-transition: visibility 0s .5s, width .35s .3s, max-height .3s;
     }
     #filter:checked ~ .filters{
         visibility: visible;
         width: clamp(270px, 20dvw, 360px);
         max-height: 300px;
         transition: visibility 0s, width .35s, max-height .3s .35s;
+        -webkit-transition: visibility 0s, width .35s, max-height .3s .35s;
+        -moz-transition: visibility 0s, width .35s, max-height .3s .35s;
+        -o-transition: visibility 0s, width .35s, max-height .3s .35s;
     }
     .filters button{
         background: var(--bg);
@@ -298,16 +334,28 @@
     .ibecontainin:has(#search:checked) .filters{
         border-radius: 0px 0px 10px 0px;
         transition: visibility 0s .5s, width .35s .3s, max-height .3;
+        -webkit-transition: visibility 0s .5s, width .35s .3s, max-height .3;
+        -moz-transition: visibility 0s .5s, width .35s .3s, max-height .3;
+        -o-transition: visibility 0s .5s, width .35s .3s, max-height .3;
     }
     .ibecontainin:has(#search:checked) #filter:checked ~ .filters{
         transition: border-radius .2s .5s, visibility 0s, width .35s, max-height .3s .35s;
+        -webkit-transition: border-radius .2s .5s, visibility 0s, width .35s, max-height .3s .35s;
+        -moz-transition: border-radius .2s .5s, visibility 0s, width .35s, max-height .3s .35s;
+        -o-transition: border-radius .2s .5s, visibility 0s, width .35s, max-height .3s .35s;
     }
     .ibecontainin:has(#filter:checked) #searchBar{
         border-radius: 0px 10px 0px 0px;
         transition: width .4s, height .2s .4s, visibility 0s .58s;
+        -webkit-transition: width .4s, height .2s .4s, visibility 0s .58s;
+        -moz-transition: width .4s, height .2s .4s, visibility 0s .58s;
+        -o-transition: width .4s, height .2s .4s, visibility 0s .58s;
     }
     .ibecontainin:has(#filter:checked) #search:checked ~ #searchBar{
         transition: border-radius .2s .3s, visibility 0s, height .2s, width .4s .2s;
+        -webkit-transition: border-radius .2s .3s, visibility 0s, height .2s, width .4s .2s;
+        -moz-transition: border-radius .2s .3s, visibility 0s, height .2s, width .4s .2s;
+        -o-transition: border-radius .2s .3s, visibility 0s, height .2s, width .4s .2s;
     }
 }
 
