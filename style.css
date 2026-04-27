@@ -303,10 +303,11 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
     .faceplate::before{
         content: ""; /*using url for image doesnt work well :d*/
         position: absolute;
-        background: var(--txt);
+        background: var(--txt) url("moon.png") center / contain no-repeat;
         
-        width: 20px;
-        height: 20px;
+        width: 16px;
+        height: 16px;
+        padding: 2px;
         border-radius: 1000px;
         transition: .3s;
         -webkit-transition: .3s;
@@ -320,6 +321,7 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
         -o-transform: translateX(125%);
     }
     body:has(#lightSwitch:checked) .faceplate::before{
+        background-image: url("sun.png");
         transform: translateX(0);
         -webkit-transform: translateX(0);
         -moz-transform: translateX(0);
@@ -386,12 +388,6 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
         text-align: center;
     }
 }
-
-
-
-
-
-
 
 
 
