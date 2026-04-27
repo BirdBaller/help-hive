@@ -305,9 +305,9 @@ img, label, button, .unsaved, .links, .profile, .foot h1, .foot p, .topSlogan, .
         position: absolute;
         background: var(--txt) url("moon.png") center / contain no-repeat;
         
-        width: 16.35px;
-        height: 16.35px;
-        padding: 4px;
+        width: 12.35px;
+        height: 12.35px;
+        padding: 6px;
         border-radius: 1000px;
         transition: .3s;
         -webkit-transition: .3s;
