@@ -2,7 +2,7 @@
 
 
 body:not(:has(.card)) .gap{
-    height: 65dvh;
+    height: 70dvh;
 }
 
 #savedGrid .favorite:not(:has(.remove-btn)){
