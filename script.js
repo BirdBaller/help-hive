@@ -1,75 +1,142 @@
-let resources = [
-    {id: 1, title: "Resource One", category: "Education", desc: "Description of tool 1", img: "https://via.placeholder.com/150", rating: "4.5"},
-    {id: 2, title: "Resource Two", category: "Health", desc: "Description of tool 2", img: "https://via.placeholder.com/150", rating: "4.8"}
-];
-
-let startY;
-const foot = document.querySelector(".footer") || document.createElement('div');
-
-window.onload = () => {
-    displayCards(resources);
-    renderSaved();
-};
-
 const switched = document.getElementById("lightSwitch");
 if (switched) {
     switched.checked = localStorage.switched === "1";
     switched.onchange = () => localStorage.switched = switched.checked ? "1" : "0";
 }
 
-const topbar = document.querySelector(".topbar");
+const resources = [
+    { id: 1, title: "Hope for the warriors", category: "Volunteer", desc: "Hope For The Warriors is a nonprofit that turns your hope into tangible actions that directly support U.S. military, veterans and their families."},
+    { id: 2, title: "CSS Styling", category: "Design", desc: "Make your pages look beautiful." },
+    { id: 3, title: "JS Logic", category: "Programming", desc: "Add interactivity to your site." },
+    { id: 4, title: "Shrevan", category: "captain", desc: "Web design black short yellow jacket leader"},
+    { id: 5, title: "minhaz", category: "The goat", desc: "awesome smart nonchalant king nice best kid ever popular kind the goat" }
+]
+{
+const top = document.querySelector(".topbar");
 let lastScroll = window.scrollY;
+    window.addEventListener("scroll", () => {
+        if (lastScroll < window.scrollY){
+            // going down
+            top.classList.add("top-hide");
+        } else {
+            // going up
+            top.classList.remove("top-hide");
+        }
+        if (window.scroll<0) {
+            top.classList.remove("top-hide");
+        }
 
-window.addEventListener("scroll", () => {
-    if (!topbar) return;
-    
-    if (lastScroll < window.scrollY) {
-        topbar.classList.add("top-hide");
+        lastScroll = window.scrollY;
+    });
+}
+
+{
+    document.addEventListener("pointerup", mouseUp);
+
+    function mouseDown(e){
+        startY=e.clientY;
+        document.addEventListener("pointermove", mouseMove);
+    }
+
+    function mouseMove(e){
+        if (startY > e.clientY){
+            foot.classList.add("foot-open");
+        } else if(startY < e.clientY) {
+            foot.classList.remove("foot-open");
+        }
+    }
+    function mouseUp(e){
+        document.removeEventListener("pointermove", mouseMove);
+    }
+}
+/*function closeButton(x){
+    const change = document.querySelector(".changing");
+    const card = document.querySelector(".card");
+    change.classList.add("change-close");
+    card.classList.add("closed-card");
+}
+function moreInfo(){
+    const change = document.querySelector(".changing");
+    const card = document.querySelector(".card");
+    change.classList.remove("change-close");
+    card.classList.remove("closed-card");
+}*/
+function moreInfo(x){
+  const card = x.parentElement.parentElement.parentElement;
+  card.classList.add("expanded");
+
+  card.querySelector(".changing").classList.remove("hidden");
+  card.querySelector(".buttonRow").classList.remove("hidden");
+  card.querySelector(".buttonRow").classList.add("flexylexy");
+  card.querySelector(".moreInfo").classList.add("hidden");
+}
+function doGet() {
+  return HtmlService.createTemplateFromFile('Index').evaluate();
+}
+
+
+window.onload = loadSavedCards;
+function closeButton(x){
+  const card = x.parentElement.parentElement.parentElement.parentElement;
+  card.classList.remove("expanded");
+/*Was it a single line of code?*/
+  card.querySelector(".changing").classList.add("hidden");
+  card.querySelector(".buttonRow").classList.add("hidden");
+  card.querySelector(".buttonRow").classList.remove("flexylexy");
+  card.querySelector(".moreInfo").classList.remove("hidden");
+}
+
+function getResourceData() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = ss.getSheetByName("Resources"); // I think this is the sheet name you want
+  const data = sheet.getDataRange().getValues();
+  const headers = data.shift();
+
+  return data.map(row => {
+    let obj = {};
+    headers.forEach((header, i) => obj[header.toLowerCase()] = row[i]);
+    return obj;
+  });
+}
+
+function saveToLocal(id) {
+    const itemToSave = resources.find(item => item.id === id);
+    let savedList = getSaved();
+
+    if (savedList.some(item => item.id === id)) {
+        alert(itemToSave.title + " is already in your list!");
     } else {
-        topbar.classList.remove("top-hide"); 
-    }
-    
-    if (window.scrollY <= 0) {
-        topbar.classList.remove("top-hide");
-    }
-    lastScroll = window.scrollY;
-});
-
-function mouseDown(e) {
-    startY = e.clientY;
-    document.addEventListener("pointermove", mouseMove);
-}
-
-function mouseMove(e) {
-    if (!foot) return;
-    if (startY > e.clientY) {
-        foot.classList.add("foot-open");
-    } else if (startY < e.clientY) {
-        foot.classList.remove("foot-open");
+        savedList.push(itemToSave);
+        setSaved(savedList);
+        alert(itemToSave.title + " has been saved!");
     }
 }
 
-document.addEventListener("pointerup", () => {
-    document.removeEventListener("pointermove", mouseMove);
-});
+function saveFromCard(cardId) {
+    const card = document.getElementById(cardId);
+    if (!card) return;
 
-function moreInfo(x) {
-    const card = x.closest(".card");
-    card.classList.add("expanded");
-    card.querySelector(".changing")?.classList.remove("hidden");
-    card.querySelector(".buttonRow")?.classList.remove("hidden");
-    card.querySelector(".buttonRow")?.classList.add("flexylexy");
-    card.querySelector(".moreInfo")?.classList.add("hidden");
+    const item = {
+        id: cardId,
+        title: card.querySelector("h1").innerText,
+        img: card.querySelector(".card-constants img").src,
+        rating: card.querySelector(".rating p").innerText,
+        category: card.querySelector(".category p").innerText,
+        desc: card.querySelector(".card-variable p").innerText,
+        // We grab the HTML of the infoRows to keep all the icons and contact info
+        details: card.querySelector(".card-variable").innerHTML 
+    };
+
+    let savedList = getSaved();
+    if (!savedList.some(i => i.id === cardId)) {
+        savedList.push(item);
+        setSaved(savedList);
+        alert("Saved to Hive!");
+    } else {
+        alert("Already in your Hive!");
+    }
 }
 
-function closeButton(x) {
-    const card = x.closest(".card");
-    card.classList.remove("expanded");
-    card.querySelector(".changing")?.classList.add("hidden");
-    card.querySelector(".buttonRow")?.classList.add("hidden");
-    card.querySelector(".buttonRow")?.classList.remove("flexylexy");
-    card.querySelector(".moreInfo")?.classList.remove("hidden");
-}
 
 function getSaved() {
     return JSON.parse(localStorage.getItem("mySavedResources")) || [];
@@ -79,58 +146,13 @@ function setSaved(data) {
     localStorage.setItem("mySavedResources", JSON.stringify(data));
 }
 
-function saveToLocal(id) {
-    const itemToSave = resources.find(item => item.id == id);
-    if (!itemToSave) return;
-
-    let savedList = getSaved();
-    if (savedList.some(item => item.id == id)) {
-        alert(itemToSave.title + " is already in your Hive!");
-    } else {
-        savedList.push(itemToSave);
-        setSaved(savedList);
-        alert(itemToSave.title + " has been saved!");
-        renderSaved();
-    }
-}
-
 function removeItem(id) {
     let savedData = getSaved();
+    // Filter out the item
     const filtered = savedData.filter(item => item.id != id);
     setSaved(filtered);
-    renderSaved();
+    renderSaved(); // Refresh the list immediately
 }
-
-function displayCards(data) {
-    const cardGrid = document.getElementById('cardGrid');
-    if (!cardGrid) return;
-    cardGrid.innerHTML = ""; 
-
-    data.forEach(item => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.id = `card-${item.id}`;
-        card.innerHTML = `
-            <div class="card-constants">
-                <img src="${item.img || ''}" class="card-img">
-                <h1>${item.title}</h1>
-                <div class="category"><p>${item.category}</p></div>
-            </div>
-            <div class="moreInfo">
-                <button onclick="moreInfo(this)">View Details</button>
-            </div>
-            <div class="changing hidden">
-                <p>${item.desc}</p>
-            </div>
-            <div class="buttonRow hidden">
-                <button onclick="saveToLocal(${item.id})">Save to Hive</button>
-                <button onclick="closeButton(this)">Close</button>
-            </div>
-        `;
-        cardGrid.appendChild(card);
-    });
-}
-
 function renderSaved() {
     const savedGrid = document.getElementById("savedGrid");
     if (!savedGrid) return;
@@ -147,15 +169,48 @@ function renderSaved() {
         savedGrid.innerHTML += `
             <div class="card expanded"> 
                 <div class="card-constants">
-                    <h1>${item.title}</h1>
-                    <p>${item.category}</p>
+                    <img src="${item.img}" class="saved-img-fix">
+                    <div class="grid-dy">
+                        <h1>${item.title}</h1>
+                        <div class="rating">
+                            <img src="cardIcons/star.png">
+                            <p>${item.rating}</p>
+                            <div class="category"><p>${item.category}</p></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-variable">
-                    <p>${item.desc}</p>
-                    <button class="remove-btn" onclick="removeItem('${item.id}')">Remove</button>
+                <div class="card-variable" style="max-height: none; overflow: visible; display: block;">
+                    <p class="desc-text">${item.desc}</p>
+                    
+                    <div class="info-container">
+                        ${item.details} 
+                    </div>
+
+                    <div class="favorite">
+                        <button class="remove-btn" onclick="removeItem('${item.id}')">Remove from List</button>
+                    </div>
                 </div>
             </div>
         `;
+    });
+}
+
+
+function displayCards(data) {
+    const cardGrid = document.getElementById('cardGrid');
+    if(!cardGrid) return;
+    cardGrid.innerHTML = ""; 
+
+    data.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+            <h3>${item.title}</h3>
+            <span class="badge">${item.category}</span>
+            <p>${item.desc}</p>
+            <button onclick="saveToLocal(${item.id})">Save Resource</button>
+        `;
+        cardGrid.appendChild(card);
     });
 }
 
@@ -167,3 +222,6 @@ function filterResources() {
     });
     displayCards(filtered);
 }
+
+
+renderSaved();
