@@ -52,23 +52,82 @@ document.addEventListener("pointerup", () => {
     document.removeEventListener("pointermove", mouseMove);
 });
 
-function moreInfo(x) {
-    const card = x.closest(".card");
-    card.classList.add("expanded");
-    card.querySelector(".changing")?.classList.remove("hidden");
-    card.querySelector(".buttonRow")?.classList.remove("hidden");
-    card.querySelector(".buttonRow")?.classList.add("flexylexy");
-    card.querySelector(".moreInfo")?.classList.add("hidden");
+function moreInfo(x){
+  const card = x.parentElement.parentElement.parentElement;
+  card.classList.add("expanded");
+
+  card.querySelector(".changing").classList.remove("hidden");
+  card.querySelector(".buttonRow").classList.remove("hidden");
+  card.querySelector(".buttonRow").classList.add("flexylexy");
+  card.querySelector(".moreInfo").classList.add("hidden");
+}
+function doGet() {
+  return HtmlService.createTemplateFromFile('Index').evaluate();
 }
 
-function closeButton(x) {
-    const card = x.closest(".card");
-    card.classList.remove("expanded");
-    card.querySelector(".changing")?.classList.add("hidden");
-    card.querySelector(".buttonRow")?.classList.add("hidden");
-    card.querySelector(".buttonRow")?.classList.remove("flexylexy");
-    card.querySelector(".moreInfo")?.classList.remove("hidden");
+
+window.onload = loadSavedCards;
+function closeButton(x){
+  const card = x.parentElement.parentElement.parentElement.parentElement;
+  card.classList.remove("expanded");
+/*Was it a single line of code?*/
+  card.querySelector(".changing").classList.add("hidden");
+  card.querySelector(".buttonRow").classList.add("hidden");
+  card.querySelector(".buttonRow").classList.remove("flexylexy");
+  card.querySelector(".moreInfo").classList.remove("hidden");
 }
+
+function getResourceData() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = ss.getSheetByName("Resources"); // I think this is the sheet name you want
+  const data = sheet.getDataRange().getValues();
+  const headers = data.shift();
+
+  return data.map(row => {
+    let obj = {};
+    headers.forEach((header, i) => obj[header.toLowerCase()] = row[i]);
+    return obj;
+  });
+}
+
+function saveToLocal(id) {
+    const itemToSave = resources.find(item => item.id === id);
+    let savedList = getSaved();
+
+    if (savedList.some(item => item.id === id)) {
+        alert(itemToSave.title + " is already in your list!");
+    } else {
+        savedList.push(itemToSave);
+        setSaved(savedList);
+        alert(itemToSave.title + " has been saved!");
+    }
+}
+
+function saveFromCard(cardId) {
+    const card = document.getElementById(cardId);
+    if (!card) return;
+
+    const item = {
+        id: cardId,
+        title: card.querySelector("h1").innerText,
+        img: card.querySelector(".card-constants img").src,
+        rating: card.querySelector(".rating p").innerText,
+        category: card.querySelector(".category p").innerText,
+        desc: card.querySelector(".card-variable p").innerText,
+        // We grab the HTML of the infoRows to keep all the icons and contact info
+        details: card.querySelector(".card-variable").innerHTML 
+    };
+
+    let savedList = getSaved();
+    if (!savedList.some(i => i.id === cardId)) {
+        savedList.push(item);
+        setSaved(savedList);
+        alert("Saved to Hive!");
+    } else {
+        alert("Already in your Hive!");
+    }
+}
+
 
 function getSaved() {
     return JSON.parse(localStorage.getItem("mySavedResources")) || [];
@@ -78,26 +137,12 @@ function setSaved(data) {
     localStorage.setItem("mySavedResources", JSON.stringify(data));
 }
 
-function saveToLocal(id) {
-    const itemToSave = resources.find(item => item.id == id);
-    if (!itemToSave) return;
-
-    let savedList = getSaved();
-    if (savedList.some(item => item.id == id)) {
-        alert(itemToSave.title + " is already in your Hive!");
-    } else {
-        savedList.push(itemToSave);
-        setSaved(savedList);
-        alert(itemToSave.title + " has been saved!");
-        renderSaved();
-    }
-}
-
 function removeItem(id) {
     let savedData = getSaved();
+    // Filter out the item
     const filtered = savedData.filter(item => item.id != id);
     setSaved(filtered);
-    renderSaved();
+    renderSaved(); // Refresh the list immediately
 }
 
 function displayCards(data) {
