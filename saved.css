@@ -48,7 +48,7 @@ body:not(:has(.card)) .gap{
 }
 
 .card{
-    display: block;
+    display: box;
     background: var(--cardbg);
     width: clamp(240px, 65dvw, 280px);
     padding: 3px 0 3px 0;
@@ -141,6 +141,9 @@ body:not(:has(.card)) .gap{
 }
 
 @media(min-width: 728px){
+    .gap{
+        height: 60dvh;
+    }
     .rating img{
         margin-top: 7%;
         width: 28px;
