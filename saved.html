@@ -28,7 +28,7 @@
                 <p>Reference</p>
             </a>
         </header>
-        
+
         
         <div class="topSlogan">
             <div class = "resourceSlogan">
@@ -38,15 +38,34 @@
             </div>
             <hr>
         </div>
-        
-        
+
+
+        <div id="savedGrid" class="container">
         
         <div id="savedGrid" class="results">
-            
+
         </div>
+
+        <script>
+            const savedGrid = document.getElementById('savedGrid');
+            const savedData = JSON.parse(localStorage.getItem('mySavedResources')) || [];
+
+            if (savedData.length === 0) {
+                savedGrid.innerHTML = "<p class='unsaved'>You haven't saved anything yet!</p>";
+            } else {
+                savedData.forEach(item => {
+                    savedGrid.innerHTML += `
+                        <div class="card">
+                            <h1>${item.title}</h1>
+                            <p>${item.desc}</p>
+                        </div>`;
+                });
+            }
+        </script> 
         
         
-        
+
+
         <p class="gap"></p>
         <nav class = navbar>
             <a href = "index.html"><img src = "navIcons/gHome.png"></a>
@@ -89,5 +108,3 @@
         </footer>
     </body>
 </html>
-
-
