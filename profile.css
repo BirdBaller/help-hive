@@ -1,0 +1,60 @@
+@import "style.css";
+
+
+h1{
+    color: var(--txt);
+}
+
+.refCardsOrg{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.refCard{
+    display: flex;
+    background: var(--cardbg);
+    padding: 0px 8px 16px 8px;
+    border-radius: 20px;
+    margin: 8px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.refCard p{
+    font-family:ADLaM-Display;
+    font-size: 1.2rem;
+    color: var(--txt);
+}
+.refCard iframe{
+    margin-bottom: 10px;
+}
+.refCard a{
+    background: var(--txt);
+    font-family:ADLaM-Display;
+    color: var(--pure);
+    text-decoration: none;
+    padding: 4px 14px 4px 14px;
+    border: 2px solid var(--headfoot);
+    border-radius: 10px;
+}
+
+@media(min-width: 690px){
+    .refCard iframe{
+        width: 600px;
+        height: 450px; 
+    }
+    .refCard{
+        padding: 0 12px 16px 12px;
+    }
+}
+
+@media(max-width: 690px){
+    .refCard iframe{
+        width: 80dvw;
+        height: 50dvw;
+    }
+}
+
+
+
