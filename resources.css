@@ -247,14 +247,14 @@
     
     #searchBar{
         visibility: hidden;
-        background: var(--txt);
+        background: var(--headfoot);
         width: 0;
         height: 0;
         outline: none;
         border-radius: 0px 10px 10px 0px;
         
         font-family:ADLaM-Display;
-        color: var(--pure);
+        color: var(--txt);
         font-size: 1rem;
         transition: width .4s, height .2s .4s, visibility 0s .58s;
         -webkit-transition: width .4s, height .2s .4s, visibility 0s .58s;
