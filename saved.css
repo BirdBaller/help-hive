@@ -94,14 +94,15 @@ body:not(:has(.card)) .gap{
     
 }
 
+.category{
+    display: flex;
+}
 .category p{
-    display: relative;
     background: var(--accent);
+    width: auto;
     color: var(--pure);
-    width: 100%;
-    padding: 0 2px 0 4px;
+    padding: 0 8px 0 4px;
     border-radius: 10px;
-    transform: translateX(calc(-25% - 5px));
 
     font-size: .85rem;
 }
