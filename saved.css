@@ -1,7 +1,7 @@
 @import "style.css";
 
 .gap{
-    height: 30dvh;
+    height: 10dvh;
 }
 body:not(:has(.card)) .gap{
     height: 70dvh;
@@ -141,7 +141,7 @@ body:not(:has(.card)) .gap{
 
 @media(min-width: 728px){
     .gap{
-        height: 60dvh;
+        height: 40dvh;
     }
     .rating img{
         margin-top: 7%;
